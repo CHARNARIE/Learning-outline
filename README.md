@@ -1,1 +1,1 @@
-[点击查看网页](https://charnarie.github.io/Learning-journal/)
+[Typora格式](https://charnarie.github.io/Learning-journal/)
