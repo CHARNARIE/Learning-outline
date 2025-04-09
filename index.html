@@ -266,7 +266,7 @@ mjx-container { break-inside: avoid; }
     --border-color: var(--theme-color);
     --border: solid 0.5px var(--theme-color)94;
     /* ---------------->> 字体 <<---------------- */
-    --main-font-family: "JetBrainsMono-Regular", "HYZhengYuan-EEW", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
     /* ---------------->> 悬浮 <<---------------- */
     --item-bg-color-red: #f4433638;
     --item-bg-color-blue: #42a5f542;
@@ -1242,48 +1242,18 @@ span[alt=highlight] {
 /* ---------------->> 主界面背景图片 <<---------------- */
 content {
     background-color: transparent;
-    background-image: url('./img/Nijika.gif');
+    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg.gif');
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: 200px auto;
     transition: background-image .5s ease-in-out, background-size .5s ease-in-out
 }
 
-/* ---------------->> 导出时保留背景图片 <<---------------- */
-@media print {
-    body {
-        background-image: url('./img/Nijika.gif');
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-        background-size: 200px auto;
-    }
-}
-
-/* 确保HTML导出时也能显示背景图 */
-.typora-export {
-    background-image: url('./img/Nijika.gif');
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 200px auto;
-}
-
-/* 确保PDF导出时也能显示背景图 */
-@page {
-    background-image: url('./img/Nijika.gif');
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 200px auto;
-}
-
-/* 确保HTML导出时也能显示一体化菜单背景图 */
-.typora-export div#megamenu-section-open {
-    background-image: url('./img/Nijika.gif');
-}
 
 /* ---------------->> 一体化菜单界面背景图片 <<---------------- */
 div#megamenu-section-open {
     background-color: transparent;
-    background-image: url('./img/Nijika.gif');
+    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg4.gif');
     background-position: 100% 0%;
     background-repeat: no-repeat;
     background-size: 100px auto;
@@ -1544,33 +1514,33 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 .outline-h6::after {
     content: "";
     height: calc(100% - 25px);
-    width: 1.5px;
+    width: 1px;
     background: transparent;
     position: absolute;
     top: 25px;
 }
 
-li.outline-item-wrapper.outline-h1.outline-item-open::after {
+li.outline-item-wrapper.outline-h1.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 6.5px;
 }
 
-li.outline-item-wrapper.outline-h2.outline-item-open::after {
+li.outline-item-wrapper.outline-h2.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 20px;
 }
 
-li.outline-item-wrapper.outline-h3.outline-item-open::after {
+li.outline-item-wrapper.outline-h3.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 34px;
 }
 
-li.outline-item-wrapper.outline-h4.outline-item-open::after {
+li.outline-item-wrapper.outline-h4.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 48.5px;
 }
 
-li.outline-item-wrapper.outline-h5.outline-item-open::after {
+li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 62.5px;
 }
@@ -2989,33 +2959,33 @@ span.megamenu-menu-header-title-back[data-localize=Back]:hover {
 .outline-h6::after {
     content: "";
     height: calc(100% - 25px);
-    width: 1.5px;
+    width: 1px;
     background: transparent;
     position: absolute;
     top: 25px;
 }
 
-li.outline-item-wrapper.outline-h1.outline-item-open::after {
+li.outline-item-wrapper.outline-h1.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 6.5px;
 }
 
-li.outline-item-wrapper.outline-h2.outline-item-open::after {
+li.outline-item-wrapper.outline-h2.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 20px;
 }
 
-li.outline-item-wrapper.outline-h3.outline-item-open::after {
+li.outline-item-wrapper.outline-h3.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 34px;
 }
 
-li.outline-item-wrapper.outline-h4.outline-item-open::after {
+li.outline-item-wrapper.outline-h4.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 48.5px;
 }
 
-li.outline-item-wrapper.outline-h5.outline-item-open::after {
+li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children > li)::after {
     background: var(--outline-color);
     left: 62.5px;
 }
@@ -3115,9 +3085,7 @@ span.md-alert-text-container {
 </style><title>index</title>
 </head>
 <body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
-<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#0typora使用格式">0.Typora使用格式</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linux基础">1.Linux基础</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2gnu工具集">2.GNU工具集</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3文件系统编程">3.文件系统编程</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><blockquote><div style="font-size: 24px; color: #166ff3; font-weight: bold;">
-生存还是毁灭，这是一个值得考虑的问题。默然忍受命运的暴虐的毒箭，或是挺身反抗人世的无涯的苦难，通过斗争把它们扫清，这两种行为，哪一种更勇敢？
-</div></blockquote><h4 id='0typora使用格式'><a href='https://charnarie.github.io/Learning-journal/HTML/0.Typora使用格式.html'><span>0.Typora使用格式</span></a></h4><h4 id='1linux基础'><a href='https://charnarie.github.io/Learning-journal/HTML/1.Linux基础.html'><span>1.Linux基础</span></a></h4><h4 id='2gnu工具集'><a href='https://charnarie.github.io/Learning-journal/HTML/2.GNU工具集.html'><span>2.GNU工具集</span></a></h4><h4 id='3文件系统编程'><a href='https://charnarie.github.io/Learning-journal/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a></h4><p>&nbsp;</p></div></div>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#0typora使用格式">0.Typora使用格式</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linux基础">1.Linux基础</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2gnu工具集">2.GNU工具集</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3文件系统编程">3.文件系统编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4进程">4.进程</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><h4 id='0typora使用格式'><a href='https://charnarie.github.io/Learning-journal/HTML/0.Typora使用格式.html'><span>0.Typora使用格式</span></a></h4><h4 id='1linux基础'><a href='https://charnarie.github.io/Learning-journal/HTML/1.Linux基础.html'><span>1.Linux基础</span></a></h4><h4 id='2gnu工具集'><a href='https://charnarie.github.io/Learning-journal/HTML/2.GNU工具集.html'><span>2.GNU工具集</span></a></h4><h4 id='3文件系统编程'><a href='https://charnarie.github.io/Learning-journal/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a></h4><h4 id='4进程'><a href='https://charnarie.github.io/Learning-journal/HTML/4.进程.html'><span>4.进程</span></a></h4><p>&nbsp;</p></div></div>
 
 <script>(function(){function e(e,n,i){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var t=e.target;t&&t!=this;t=t.parentNode)if(t.matches(n)){!1===i.call(t,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)}var t=document.body.parentElement,i=[],r=null,o=document.body.classList.contains("typora-export-collapse-outline");function a(){return t.scrollTop}e("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),u(),!1}),e("click",".outline-item",function(e){var t=this.querySelector(".outline-label");location.hash="#"+t.getAttribute("href"),o&&((t=this.closest(".outline-item-wrapper").classList).contains("outline-item-open")||t.add("outline-item-open"),d(),t.add("outline-item-active"))});function s(){var e=a();r=null;for(var t=0;t<i.length&&i[t][1]-e<60;t++)r=i[t]}function n(){c=setTimeout(function(){var n;i=[],n=a(),document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(e=>{var t=e.getAttribute("id");i.push([t,n+e.getBoundingClientRect().y])}),s(),u()},300)}var l,c,d=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},u=function(){if(r&&(d(),t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(r[0]):r[0])+'"]')))if(o){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var t,n=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");n;)n=(t=n).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")};window.addEventListener("scroll",function(e){l&&clearTimeout(l),l=setTimeout(function(){s(),u()},300)});window.addEventListener("resize",function(e){c&&clearTimeout(c),n()}),n()})();</script></body>
 </html>
