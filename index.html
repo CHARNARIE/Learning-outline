@@ -11,7 +11,7 @@
         font-weight: normal;
         font-style: normal;
     }
-
+    
     @font-face {
         font-family: 'JetBrainsMono-Regular';
         src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
@@ -253,6 +253,7 @@ mjx-container { break-inside: avoid; }
     --select-text-bg-color: #3266D0;
     --side-bar-menu-active-tint: var(--main-green);
     --outline-color: #a5a5a5;
+    --tb-border-color: #e8e8e8;
     /* ---------------->> 主题色 <<---------------- */
     --theme-color: #166ff3;
     --main-red: #ff6b6b;
@@ -302,7 +303,7 @@ code,
 pre,
 samp,
 tt {
-    font-family: var(--main-font-family)
+    font-family: var(--main-font-family);
 }
 
 
@@ -320,13 +321,17 @@ tt {
     margin-top: 3px;
 }
 
+/* 为p标签添加过渡动画效果 */
+#write p:not(:has(.md-image)) {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
 /* 仅在p标签不包含图片时应用悬停效果 */
 #write p:not(:has(.md-image)):hover {
     box-shadow: var(--box-shadow);
     border-radius: var(--radius-large);
     background: var(--theme-light-color);
 }
-
 
 #write p:has(.md-image):hover::before {
     display: none;
@@ -535,6 +540,13 @@ a {
     background: unset;
 }
 
+/* 表格组件取消链接箭头 */
+.md-reset>a::after {
+    content: none !important;
+}
+
+
+/* 链接箭头 */
 #write a::after {
     content: "";
     display: inline-block;
@@ -596,17 +608,46 @@ figure.md-table-fig.table-figure {
     border-radius: var(--radius-large);
 }
 
-/* ---------------->> 表格调整控件 <<---------------- */
+/* ---------------->> 表格调节组件 <<---------------- */
+.ty-table-edit {
+    border-radius: var(--radius-large);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+    z-index: 999;
+}
+
+/* 删除表格按钮 */
+.ty-delete:before {
+    color: var(--main-red);
+}
+
+/* ---------------->> 表格行列调整控件 <<---------------- */
 .popover.bottom.md-table-resize-popover {
     width: fit-content;
 }
 
-
-/* ---------------->> 表格行 <<---------------- */
-table tr:hover {
-    background-color: rgb(from var(--bg-color) r g b / 0.8);
+#write td.md-reset {
+    border: 0;
+    padding: 0 !important;
 }
 
+.md-grid-board a {
+    border: 0;
+}
+
+tr.md-reset {
+    background: var(--theme-light-color) !important;
+}
+
+td.md-reset.md-grid-ext>a {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------->> 表格行 <<---------------- */
 #write table tr {
     background-color: var(--theme-light-color);
     border: 0;
@@ -614,13 +655,12 @@ table tr:hover {
 
 /* ---------------->> 斑马纹 <<---------------- */
 #write table tr:nth-child(2n) {
-    background-color: rgb(from var(--bg-color) r g b / 0.95) background-color: rgb(from var(--bg-color) r g b / 0.95)
+    background-color: var(--bg-color);
 }
 
 #write table tr td,
 #write table tr th {
-    border: 0;
-    font-size: .9rem;
+    border: 0.5px solid var(--tb-border-color);
     font-size: .9rem;
     line-height: 1.5;
     padding: 5px 10px;
@@ -631,10 +671,6 @@ table tr:hover {
     background-color: #42a5f53d;
     color: var(--theme-color);
     font-weight: 700
-}
-
-#write table tr:hover {
-    background: rgb(from var(--bg-color) r g b / 0.7);
 }
 
 /* ---------------->> 脚注 <<---------------- */
@@ -669,7 +705,7 @@ code {
 /* ---------------->> 代码块光标 <<---------------- */
 .CodeMirror div.CodeMirror-cursor {
     border-left: 1.5px solid var(--main-green);
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 
@@ -1454,7 +1490,7 @@ pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
     color: #e0e0e0;
     padding: 2px 5px;
     border-radius: var(--radius-small);
-    z-index: 100;
+    z-index: 20;
 }
 
 
@@ -1495,6 +1531,7 @@ pre.CodeMirror-line>span {
 }
 
 ::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-small);
     background: rgba(0, 0, 0, .1);
     width: 10px
 }
@@ -1741,7 +1778,7 @@ span.md-alert-text-container {
 </style><title>index</title>
 </head>
 <body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
-<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linuxc">1.Linux/C</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linux基础">1.Linux基础</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2gnu工具集">2.GNU工具集</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3文件系统编程">3.文件系统编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4进程">4.进程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5linux多线程编程">5.Linux多线程编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6网络编程">6.网络编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7进程池和线程池">7.进程池和线程池</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8mysql">8.MySQL</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h3 id='1linuxc'><span>1.Linux/C</span></h3><h4 id='1linux基础'><a href='https://charnarie.github.io/Learning-notes/HTML/1.Linux基础.html'><span>1.Linux基础</span></a></h4><h4 id='2gnu工具集'><a href='https://charnarie.github.io/Learning-notes/HTML/2.GNU工具集.html'><span>2.GNU工具集</span></a></h4><h4 id='3文件系统编程'><a href='https://charnarie.github.io/Learning-notes/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a></h4><h4 id='4进程'><a href='https://charnarie.github.io/Learning-notes/HTML/4.进程.html'><span>4.进程</span></a></h4><h4 id='5linux多线程编程'><a href='https://charnarie.github.io/Learning-notes/HTML/5.Linux多线程编程.html'><span>5.Linux多线程编程</span></a></h4><h4 id='6网络编程'><a href='https://charnarie.github.io/Learning-notes/HTML/6.网络编程.html'><span>6.网络编程</span></a></h4><h4 id='7进程池和线程池'><a href='https://charnarie.github.io/Learning-notes/HTML/7.进程池和线程池.html'><span>7.进程池和线程池</span></a></h4><h4 id='8mysql'><a href='https://charnarie.github.io/Learning-notes/HTML/8.MySQL.html'><span>8.MySQL</span></a></h4><p>&nbsp;</p></div></div>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linuxc">1.Linux/C</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linux基础">1.Linux基础</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2gnu工具集">2.GNU工具集</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3文件系统编程">3.文件系统编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4进程">4.进程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5linux多线程编程">5.Linux多线程编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6网络编程">6.网络编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7进程池和线程池">7.进程池和线程池</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8mysql">8.MySQL</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#c++">C++</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1c++与chttpscharnariegithubiolearning-noteshtml1c++与chtml">1.C++与C</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h3 id='1linuxc'><span>1.Linux/C</span></h3><h4 id='1linux基础'><a href='https://charnarie.github.io/Learning-notes/HTML/1.Linux基础.html'><span>1.Linux基础</span></a></h4><h4 id='2gnu工具集'><a href='https://charnarie.github.io/Learning-notes/HTML/2.GNU工具集.html'><span>2.GNU工具集</span></a></h4><h4 id='3文件系统编程'><a href='https://charnarie.github.io/Learning-notes/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a></h4><h4 id='4进程'><a href='https://charnarie.github.io/Learning-notes/HTML/4.进程.html'><span>4.进程</span></a></h4><h4 id='5linux多线程编程'><a href='https://charnarie.github.io/Learning-notes/HTML/5.Linux多线程编程.html'><span>5.Linux多线程编程</span></a></h4><h4 id='6网络编程'><a href='https://charnarie.github.io/Learning-notes/HTML/6.网络编程.html'><span>6.网络编程</span></a></h4><h4 id='7进程池和线程池'><a href='https://charnarie.github.io/Learning-notes/HTML/7.进程池和线程池.html'><span>7.进程池和线程池</span></a></h4><h4 id='8mysql'><a href='https://charnarie.github.io/Learning-notes/HTML/8.MySQL.html'><span>8.MySQL</span></a></h4><h3 id='c++'><span>C++</span></h3><h4 id='1c++与chttpscharnariegithubiolearning-noteshtml1c++与chtml'><a href='https://charnarie.github.io/Learning-notes/HTML/1.C++与C.html'><span>1.C++与C</span></a></h4></div></div>
 
 <script>(function(){function e(e,n,i){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var t=e.target;t&&t!=this;t=t.parentNode)if(t.matches(n)){!1===i.call(t,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)}var t=document.body.parentElement,i=[],r=null,o=document.body.classList.contains("typora-export-collapse-outline");function a(){return t.scrollTop}e("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),u(),!1}),e("click",".outline-item",function(e){var t=this.querySelector(".outline-label");location.hash="#"+t.getAttribute("href"),o&&((t=this.closest(".outline-item-wrapper").classList).contains("outline-item-open")||t.add("outline-item-open"),d(),t.add("outline-item-active"))});function s(){var e=a();r=null;for(var t=0;t<i.length&&i[t][1]-e<60;t++)r=i[t]}function n(){c=setTimeout(function(){var n;i=[],n=a(),document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(e=>{var t=e.getAttribute("id");i.push([t,n+e.getBoundingClientRect().y])}),s(),u()},300)}var l,c,d=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},u=function(){if(r&&(d(),t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(r[0]):r[0])+'"]')))if(o){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var t,n=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");n;)n=(t=n).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")};window.addEventListener("scroll",function(e){l&&clearTimeout(l),l=setTimeout(function(){s(),u()},300)});window.addEventListener("resize",function(e){c&&clearTimeout(c),n()}),n()})();</script></body>
 </html>

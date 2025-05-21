@@ -17,3 +17,7 @@
 ### [7.进程池和线程池](https://charnarie.github.io/Learning-notes/HTML/7.进程池和线程池.html)
 
 ### [8.MySQL](https://charnarie.github.io/Learning-notes/HTML/8.MySQL.html)
+
+## 2.C++
+
+### [1.C++与C](https://charnarie.github.io/Learning-notes/HTML/1.C++与C.html)
