@@ -1,5 +1,3 @@
-## [0.主页](https://charnarie.github.io/Learning-notes/)  
-
 ## 1.Linux/C
 
 ### [1.Linux基础](https://charnarie.github.io/Learning-notes/HTML/1.Linux基础.html)  
@@ -27,3 +25,17 @@
 ### [3.C++输入输出流](https://charnarie.github.io/Learning-notes/HTML/3.C++输入输出流.html)
 
 ### [4.log4cpp](https://charnarie.github.io/Learning-notes/HTML/4.log4cpp.html)
+
+### [5.运算符重载](https://charnarie.github.io/Learning-notes/HTML/5.运算符重载.html)
+
+### [6.关联式容器简介](https://charnarie.github.io/Learning-notes/HTML/6.关联式容器简介.html)
+
+### [7.继承](https://charnarie.github.io/Learning-notes/HTML/7.继承.html)
+
+### [8.多态](https://charnarie.github.io/Learning-notes/HTML/8.多态.html)
+
+### [9.vptr与vtable](https://charnarie.github.io/Learning-notes/HTML/9.vptr与vtable.html)
+
+### [10.模板](https://charnarie.github.io/Learning-notes/HTML/10.模板.html)
+
+### [11.移动语义与资源管理](https://charnarie.github.io/Learning-notes/HTML/11.移动语义与资源管理.html)
