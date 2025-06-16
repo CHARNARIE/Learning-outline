@@ -2,6 +2,23 @@
 <html style='font-size:17px !important'>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<!-- 添加字体引用 -->
+<style>
+    @font-face {
+        font-family: 'HYZhengYuan-EEW';
+        src: url('../fonts/HYZhengYuan-EEW.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'JetBrainsMono-Regular';
+        src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
+
 
 <style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
@@ -219,261 +236,6 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
-:root {
-    --bg-color: #f2f2f2;
-    --code-bg-color: #282c34;
-    --text-color: black;
-    --primary-btn-text-color: #fff;
-    --active-file-bg-color: #eee;
-    --window-border: 1px solid var(--active-file-bg-color);
-    --active-file-text-color: inherit;
-    --active-file-border-color: var(--main-red);
-    --side-bar-bg-color: var(--bg-color);
-    --item-hover-bg-color: hsla(0, 0%, 90%, .59);
-    --item-hover-text-color: var(--main-red);
-    --monospace: monospace;
-    --select-text-font-color: white !important;
-    --select-text-bg-color: #3266D0;
-    --side-bar-menu-active-tint: var(--main-green);
-    --outline-color: #a5a5a5;
-    --tb-border-color: #e8e8e8;
-    /* ---------------->> 主题色 <<---------------- */
-    --theme-color: #166ff3;
-    --main-red: #ff6b6b;
-    --main-green: #2ed573;
-    --main-purple: #c94ae9;
-    --main-yellow: #f9b03d;
-    --light-color: #b2b2b2;
-    --theme-light-color: white;
-    --code--bg-color: #282c34;
-    --code--bg-color-light: #3d404e;
-    --border-color: var(--theme-color);
-    --border: solid 0.5px var(--theme-color)94;
-    /* ---------------->> 字体 <<---------------- */
-    --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
-    /* ---------------->> 悬浮 <<---------------- */
-    --item-bg-color-red: rgb(from var(--main-red) r g b / 0.22);
-    --item-bg-color-blue: rgb(from var(--theme-color) r g b / 0.26);
-    /* ---------------->> 阴影 <<---------------- */
-    --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
-    --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
-    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
-    /* ---------------->> 过渡 <<---------------- */
-    --transition: box-shadow 0.3s ease, transform 0.3s ease;
-    --bg-transition: background-color 0.5s ease;
-    /* ---------------->> 左到右透明渐变色 <<---------------- */
-    --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
-    /* ---------------->> 圆角 <<---------------- */
-    --radius-small: 5px;
-    --radius-large: 10px;
-    --radius-xlarge: 15px;
-    /* ---------------->> 云母 <<---------------- */
-    --mica-bg: rgba(255, 255, 255, 0.65);
-    --mica-blur: blur(12px) saturate(1.3);
-    --mica-border: 1px solid rgba(255, 255, 255, 0.15);
-    --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-
-body,
-script,
-text,
-.md-rawblock-after,
-.md-rawblock-before,
-code,
-pre,
-samp,
-tt {
-    font-family: var(--main-font-family);
-}
-
-
-
-#write {
-    letter-spacing: 0;
-    text-align: left
-}
-
-#write p {
-    padding: 5px;
-    margin: 0;
-    line-height: 26px;
-    margin-bottom: 3px;
-    margin-top: 3px;
-}
-
-/* 为p标签添加过渡动画效果 */
-#write p:not(:has(.md-image)) {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
-}
-
-/* 仅在p标签不包含图片时应用悬停效果 */
-#write p:not(:has(.md-image)):hover {
-    box-shadow: var(--box-shadow);
-    border-radius: var(--radius-large);
-    background: var(--theme-light-color);
-}
-
-#write p:has(.md-image):hover::before {
-    display: none;
-}
-
-#write p[align="center"]:hover {
-    width: inherit;
-}
-
-/* ---------------->> todo-复选框 <<---------------- */
-.md-list-item.task-list-item {
-    display: flex;
-    align-items: center;
-}
-
-#write input[type=checkbox] {
-    top: 13px;
-    position: absolute;
-    height: 1.2rem;
-    width: 1.2rem;
-    margin-right: 3px;
-}
-
-/* ---------------->> 标题 <<---------------- */
-#write h2,
-#write h3,
-#write h4,
-#write h5,
-#write h6 {
-    margin: .72em 0;
-    padding: 0;
-    position: relative;
-    font-weight: lighter;
-}
-
-#write h2:hover:before {
-    bottom: .2rem;
-    content: "H2"
-}
-
-#write h3:hover:before {
-    bottom: .2rem;
-    content: "H3"
-}
-
-#write h4:hover:before {
-    bottom: .2rem;
-    content: "H4"
-}
-
-#write h5:hover:before {
-    bottom: .2rem;
-    content: "H5"
-}
-
-#write h6:hover:before {
-    bottom: .2rem;
-    content: "H6"
-}
-
-#write h2:hover:before,
-#write h3:hover:before,
-#write h4:hover:before,
-#write h5:hover:before,
-#write h6:hover:before {
-    line-height: 25px;
-    padding: 0 1px 0 1px;
-    bottom: 0;
-    color: var(--item-bg-color-blue);
-    font-size: .9rem;
-    position: absolute;
-    right: calc(100% + 3px);
-}
-
-#write h1 {
-    font-size: 2.5rem;
-    font-weight: lighter;
-    text-align: center;
-    padding-bottom: 0.3em;
-}
-
-#write h2 {
-    color: var(--theme-color);
-    font-size: 1.7rem;
-    margin: 1em 0;
-    border-bottom: 2px solid var(--theme-color);
-    padding-bottom: 0.2em;
-}
-
-#write h2::after {
-    content: none;
-}
-
-#write h3 {
-    font-size: 1.5rem;
-    color: var(--theme-color);
-    padding-left: 15px;
-    position: relative;
-}
-
-#write h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: var(--theme-color);
-    border-radius: 2px;
-    z-index: 0;
-}
-
-#write h4 {
-    font-size: 1.25rem;
-    width: fit-content;
-}
-
-#write h5 {
-    font-size: 1.15rem;
-}
-
-#write h6 {
-    font-size: 1rem;
-    font-style: italic;
-}
-
-/* ---------------->> 列表 <<---------------- */
-#write ol,
-#write ul {
-    margin-bottom: 8px;
-    margin-top: 8px;
-    padding-left: 40px
-}
-
-#write ul {
-    list-style-type: disclosure-closed
-}
-
-#write ul ul {
-    list-style-type: square
-}
-
-#write ol {
-    list-style-type: decimal
-}
-
-#write li section {
-    font-size: .9rem;
-    font-size: .9rem;
-}
-
-
-/* ---------------->> 粗体 <<---------------- */
-#write strong {
-    color: var(--theme-color);
-    font-weight: 700
-}
-
-
 /* ---------------->> 引用块 <<---------------- */
 #write blockquote {
     background: var(--gradient-color);
@@ -501,173 +263,462 @@ tt {
     line-height: 26px
 }
 
-/* ---------------->> 链接 <<---------------- */
-a>span.md-plain,
-a.md-url,
-a {
-    margin-left: 1px;
-    margin-right: 1px;
-    color: var(--main-purple);
-    font-weight: 700;
-    text-decoration: underline;
+
+/* ---------------->> 警告框样式 <<---------------- */
+/* ---------------->> 提示 <<---------------- */
+.md-alert {
+    --border: solid 1px var(--border-color);
+    background: var(--gradient-color);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: var(--bg-transition);
 }
 
-.md-alert a>span.md-plain,
-.md-alert a.md-url,
-.md-alert a {
-    color: var(--main-purple) !important;
+/* ---------------->> 不同类型的警告框颜色 <<---------------- */
+.md-alert-tip {
+    --border-color: #1f883d;
 }
 
-/* 目录中取消链接箭头 */
-#write a.md-toc-inner::after {
-    background: unset;
+.md-alert-note {
+    --border-color: #0969da;
 }
 
-/* 表格组件取消链接箭头 */
-.md-reset>a::after {
-    content: none !important;
+.md-alert-important {
+    --border-color: #8250df;
 }
 
-
-/* 链接箭头 */
-#write a::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.1em;
-    height: 1.1em;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c94ae9'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E");
+.md-alert-caution {
+    --border-color: #cf222e;
 }
 
-/* ---------------->> 目录项 <<---------------- */
-a.md-toc-inner {
-    color: var(--main-purple);
+.md-alert-warning {
+    --border-color: #faad14;
 }
 
-#write p.md-toc-content:hover {
-    width: inherit;
+/* ---------------->> 边框 <<---------------- */
+.md-alert {
+    border: var(--border);
+    border-left: 5px solid var(--border-color);
+    border-left-color: var(--border-color) !important;
 }
 
-#write code {
-    background-color: var(--item-hover-bg-color);
-    color: #eb4c37;
-    font-family: var(--main-font-family);
-    font-size: .9rem;
-    font-size: .9rem;
-}
-
-#write li code,
-#write p code,
-#write span code {
-    border-radius: var(--radius-small);
-    margin: 0 2px;
-    padding: 2px 4px;
-    word-break: break-all;
-    word-wrap: break-word
-}
-
-/* ---------------->> 图片 <<---------------- */
-#write img {
-    border-left: 0;
-    border-right: 0;
-    filter: var(--drop-shadow);
-    border-radius: var(--radius-small);
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    max-width: 100%;
-    transition: var(--transition);
-    width: auto;
-}
-
-#write img:hover {
+/* ---------------->> 悬浮样式 <<---------------- */
+.md-alert:hover {
+    background: var(--theme-light-color) !important;
     box-shadow: var(--box-shadow-large);
 }
 
-/* ---------------->> 表格 <<---------------- */
-figure.md-table-fig.table-figure {
-    border: 0;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--radius-large);
+/* ---------------->> 警告框下段落悬浮样式重置 <<---------------- */
+blockquote p:hover,
+.md-alert p:hover {
+    background: transparent !important;
+    box-shadow: unset !important;
 }
 
-/* ---------------->> 表格调节组件 <<---------------- */
-.ty-table-edit {
+/* ---------------->> 警告框内文本颜色 <<---------------- */
+div.md-alert span[md-inline="plain"].md-plain,
+span.md-alert-text-container {
+    color: var(--border-color);
+}
+
+/* ---------------->> 警告框内列表样式 <<---------------- */
+.md-alert li.md-list-item::before,
+.md-alert ul li::before,
+.md-alert ol li::before {
+    background: var(--border-color) !important;
+}
+#write {
+    letter-spacing: 0;
+    text-align: left
+}
+
+/* ---------------->> 大纲参考线 <<---------------- */
+.outline-h1::after,
+.outline-h2::after,
+.outline-h3::after,
+.outline-h4::after,
+.outline-h5::after,
+.outline-h6::after {
+    content: "";
+    height: calc(100% - 25px);
+    width: 1.3px;
+    background: transparent;
+    position: absolute;
+    top: 25px;
+}
+
+li.outline-item-wrapper.outline-h1.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 6.5px;
+}
+
+li.outline-item-wrapper.outline-h2.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 20px;
+}
+
+li.outline-item-wrapper.outline-h3.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 34px;
+}
+
+li.outline-item-wrapper.outline-h4.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 48.5px;
+}
+
+li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 62.5px;
+}
+
+/* ---------------->> 折叠箭头 <<---------------- */
+.outline-expander:before {
+    font-weight: bold;
+}
+
+
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: var(--theme-color);
+}
+
+.theme-preview-div:hover {
+    border-color: var(--main-green);
+}
+
+.theme-preview-div.active>i::before {
+    color: var(--main-green);
+}
+
+#theme-preview-grid {
+    max-width: fit-content;
+}
+
+/* ---------------->> 快速打开搜索框高亮结果 <<---------------- */
+.typora-quick-open-item-title>b {
+    border-radius: var(--radius-small);
+    padding: 2px;
+    color: red;
+    background: yellow;
+}
+
+.typora-quick-open-item.active {
+    background: var(--item-bg-color-blue);
+}
+
+/* ---------------->> 左侧文档列表 <<---------------- */
+.file-list-item.active {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #efefef;
+    background: var(--item-bg-color-blue);
+    color: var(--active-file-text-color);
+}
+
+.file-list-item:hover {
+    color: var(--theme-color);
+    background: #42a5f514;
+}
+
+/* ---------------->> 滚动条 <<---------------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar:hover {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-small);
+    background: rgba(0, 0, 0, .1);
+    width: 10px
+}
+
+/* ---------------->> 一体化-返回按钮 <<---------------- */
+span.megamenu-menu-header-title-back[data-localize=Back]:hover {
+    color: var(--theme-color);
+}
+
+/* ---------------->> 一体化-主题预览卡片 <<---------------- */
+.theme-preview-div {
+    cursor: pointer;
+}
+
+
+/* ---------------->> 快速打开搜索框 <<---------------- */
+#typora-quick-open {
+    border-radius: var(--radius-small);
+}
+
+.typora-quick-open-item:hover {
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    color: var(--theme-color);
+    background: var(--theme-light-color);
+}
+
+/* ---------------->> 一体化模式的侧边菜单 <<---------------- */
+ul#megamenu-menu-list {
+    height: 100%;
+    background: transparent;
+}
+
+/* ---------------->> 一体化模式最近打开文件列表 <<---------------- */
+.megamenu-menu-panel table {
+    font-weight: unset;
+}
+
+/* ---------------->> 一体化模式左侧菜单 <<---------------- */
+.megamenu-menu-header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: #2e2e2e;
+    border-bottom: unset;
+    height: 90px;
+    position: relative;
+    text-align: center
+}
+
+.ion-android-arrow-back:before {
+    content: "<-";
+    font-family: cascadia code, fira code, var(--main-font-family)
+}
+
+a#megamenu-back-btn:hover {
+    color: var(--theme-color)
+}
+
+#megamenu-back-btn {
+    border: 0;
+    font-size: 25px
+}
+
+/* ---------------->> 一体化模式-已保存 <<---------------- */
+a#m-saved:hover {
+    cursor: unset;
+}
+
+a#megamenu-clear-recet-documents:hover {
+    background: transparent;
+}
+
+.megamenu-opened header {
+    background-image: unset;
+}
+
+/* ---------------->> 一体化模式-打开 <<---------------- */
+.megamenu-menu-panel:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+/* ---------------->> 一体化模式-打开-最近打开文件列表 <<---------------- */
+ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
+    border-radius: var(--radius-small);
+}
+
+/* ---------------->> 一体化菜单界面背景图片 <<---------------- */
+div#megamenu-section-open {
+    background-color: transparent;
+    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg4.gif');
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    transition: background-image .5s ease-in-out, background-size .5s ease-in-out;
+}
+
+/* ---------------->> 主界面背景图片 <<---------------- */
+content {
+    background-color: transparent;
+    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg.gif');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    transition: background-image .5s ease-in-out, background-size .5s ease-in-out
+}
+
+.context-menu.dropdown-menu>.active>a,
+.context-menu.dropdown-menu>li>a:hover,
+.menu-style-btn.active {
+    cursor: pointer;
+    border-radius: var(--radius-large);
+    background: var(--item-bg-color-blue);
+    color: var(--theme-color)
+}
+
+.menu-item-container a.menu-style-btn.active,
+.menu-item-container a.menu-style-btn:hover {
+    background-color: var(--item-bg-color-blue) !important;
+}
+
+.context-menu {
+    padding-bottom: 0;
+}
+
+.ty-bold:before {
+    font-weight: bold;
+}
+
+/* ---------------->> 右键菜单 <<---------------- */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
     border-radius: var(--radius-large);
     background-color: var(--mica-bg) !important;
     backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
     border: var(--mica-border);
     box-shadow: var(--box-shadow);
     transition: var(--mica-transition);
-    z-index: 999;
 }
 
-/* 删除表格按钮 */
-.ty-delete:before {
+.dropdown-menu .divider {
+    opacity: 0;
+}
+
+/* ---------------->> 任务列表按钮 <<---------------- */
+.ty-check:before {
+    color: #00bb00;
+}
+
+/* ---------------->> 删除按钮 <<---------------- */
+.ty-delete1:before {
     color: var(--main-red);
 }
 
-/* ---------------->> 表格行列调整控件 <<---------------- */
-.popover.bottom.md-table-resize-popover {
-    width: fit-content;
+/* ---------------->> 代码按钮 <<---------------- */
+.ty-code:before {
+    color: var(--main-purple);
 }
 
-#write td.md-reset {
-    border: 0;
-    padding: 0 !important;
-}
-
-.md-grid-board a {
-    border: 0;
-}
-
-tr.md-reset {
-    background: var(--theme-light-color) !important;
-}
-
-td.md-reset.md-grid-ext>a {
-    margin: 0;
-    padding: 0;
-}
-
-/* ---------------->> 表格行 <<---------------- */
-#write table tr {
-    background-color: var(--theme-light-color);
-    border: 0;
-}
-
-/* ---------------->> 斑马纹 <<---------------- */
-#write table tr:nth-child(2n) {
-    background-color: var(--bg-color);
-}
-
-#write table tr td,
-#write table tr th {
-    border: 0.5px solid var(--tb-border-color);
-    font-size: .9rem;
-    line-height: 1.5;
-    padding: 5px 10px;
-}
-
-/* ---------------->> 表头 <<---------------- */
-#write table tr th {
-    background-color: #42a5f53d;
+/* ---------------->> 链接按钮 <<---------------- */
+.ty-link-icon:before {
     color: var(--theme-color);
-    font-weight: 700
 }
 
-/* ---------------->> 脚注 <<---------------- */
-.md-def-name {
-    padding-right: 3ch;
+/* ---------------->> 左侧文件树 <<---------------- */
+.file-library-node.file-tree-node.file-library-file-node.active,
+.file-node-content:hover {
+    color: var(--theme-color)
 }
 
-.md-footnote {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
+.file-library-node:not(.file-node-root):focus>.file-node-content {
+    outline: unset;
 }
 
+.file-node-content {
+    cursor: pointer;
+}
+
+.fa-file-text-o:before {
+    content: '📄';
+}
+
+/* ---------------->> 显示/隐藏侧边栏 <<---------------- */
+#outline-btn:hover {
+    color: var(--theme-color)
+}
+
+/* ---------------->> 底部状态栏 <<---------------- */
+#footer-word-count:hover,
+.ty-show-spell-check #footer-spell-check,
+.ty-show-word-count #footer-word-count {
+    background: #eee;
+    color: var(--theme-color);
+}
+
+.footer-item:hover,
+.sidebar-footer-item:hover {
+    color: var(--theme-color);
+}
+
+/* ---------------->> 搜索框 <<---------------- */
+
+#md-searchpanel .btn label {
+    color: var(--theme-color);
+    font-weight: bold;
+}
+
+div#md-searchpanel {
+    background: var(--main-bg);
+}
+
+#md-searchpanel .btn {
+    text-align: center !important;
+    border-radius: 10px;
+    background: rgb(from var(--bg-color) r g b / 0.4);
+    margin: 0 2px;
+}
+
+#md-searchpanel .btn:hover {
+    background: var(--item-bg-color-blue);
+}
+/* ---------------->> 代码框右下角的语言类型显示 <<---------------- */
+pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
+    content: attr(lang);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #e0e0e0;
+    padding: 2px 5px;
+    border-radius: var(--radius-small);
+    z-index: 20;
+}
+
+
+/* ---------------->> 代码块文本 <<---------------- */
+pre.CodeMirror-line>span {
+    color: var(--light-color);
+}
+
+.md-rawblock-tooltip-name {
+    color: var(--theme-color);
+}
+
+/* ---------------->> meta代码块 <<---------------- */
+#write>pre.md-meta-block.md-end-block {
+    background: var(--theme-light-color) !important;
+    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    transition: var(--transition)
+}
+
+#write>pre.md-meta-block.md-end-block:hover,
+#write>pre.md-meta-block.md-end-block:focus {
+    box-shadow: var(--box-shadow-large);
+}
+
+/* ---------------->> 代码块选中 <<---------------- */
+.CodeMirror-selected,
+.CodeMirror-selectedtext {
+    color: white !important;
+    background: var(--select-text-bg-color) !important;
+}
+
+/* ---------------->> 代码块 <<---------------- */
+#write pre {
+    background: var(--code-bg-color) !important;
+    font-family: var(--main-font-family)
+}
+
+/* ---------------->> 代码语言类型 <<---------------- */
+span.ty-input.ty-input-after.ty-cm-lang-input {
+    color: white;
+}
+
+pre[lang=flow],
+pre[lang=mermaid],
+pre[lang=sequence] {
+    background: var(--theme-light-color);
+    color: #333
+}
+
+/* ---------------->> 代码块 <<---------------- */
 .md-fences,
 code {
     border-radius: var(--radius-small);
@@ -759,129 +810,244 @@ code {
     border: solid 0.25px #e9405c;
     color: #fff;
 }
-
-pre[lang=flow],
-pre[lang=mermaid],
-pre[lang=sequence] {
-    background: var(--theme-light-color);
-    color: #333
-}
-
-/* ---------------->> 代码语言类型 <<---------------- */
-span.ty-input.ty-input-after.ty-cm-lang-input {
-    color: white;
-}
-
-/* ---------------->> 高亮 <<---------------- */
-mark {
-    margin-right: 2px;
-    margin-left: 2px;
+/* ---------------->> 表格 <<---------------- */
+figure.md-table-fig.table-figure {
+    border: 0;
+    box-shadow: var(--box-shadow);
     border-radius: var(--radius-large);
-    padding: 2px 5px 2px 5px;
-    border: 1.5px solid;
-    background: transparent;
+}
+
+/* ---------------->> 表格调节组件 <<---------------- */
+.ty-table-edit {
+    border-radius: var(--radius-large);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+    z-index: 999;
+}
+
+/* 删除表格按钮 */
+.ty-delete:before {
     color: var(--main-red);
 }
 
-/* ---------------->> 删除线 <<---------------- */
-del {
-    color: grey;
+/* ---------------->> 表格行列调整控件 <<---------------- */
+.popover.bottom.md-table-resize-popover {
+    width: fit-content;
 }
 
-/* ---------------->> 代码块 <<---------------- */
-#write pre {
-    background: var(--code-bg-color) !important;
-    font-family: var(--main-font-family)
+#write td.md-reset {
+    border: 0;
+    padding: 0 !important;
 }
 
-
-/* ---------------->> 代码块选中 <<---------------- */
-.CodeMirror-selected,
-.CodeMirror-selectedtext {
-    color: white !important;
-    background: var(--select-text-bg-color) !important;
+.md-grid-board a {
+    border: 0;
 }
 
-
-.md-fences-adv-panel,
-.md-math-container,
-.md-mathjax-preview {
-    font-family: var(--main-font-family);
+tr.md-reset {
+    background: var(--theme-light-color) !important;
 }
 
-.searchpanel-search-option-btn.active {
-    animation: colorChange 1s infinite;
-    color: var(--theme-color)
+td.md-reset.md-grid-ext>a {
+    margin: 0;
+    padding: 0;
 }
 
-span#filesearch-case-option-btn:active {
-    color: var(--theme-color)
+/* ---------------->> 表格行 <<---------------- */
+#write table tr {
+    background-color: var(--theme-light-color);
+    border: 0;
 }
 
-.md-inline-math-container mjx-container {
-    zoom: 1
+/* ---------------->> 斑马纹 <<---------------- */
+#write table tr:nth-child(2n) {
+    background-color: var(--bg-color);
 }
 
-.md-expand.md-img-loaded>.md-meta>span,
-.md-image>.md-meta {
-    color: var(--theme-color);
-    font-family: var(--main-font-family)
+#write table tr td,
+#write table tr th {
+    border: 0.5px solid var(--tb-border-color);
+    font-size: .9rem;
+    line-height: 1.5;
+    padding: 5px 10px;
 }
 
-.outline-item-active {
-    background: var(--item-bg-color-blue);
-    border-left: 28px solid transparent;
-    margin-left: -28px;
-    margin-right: -28px
-}
-
-.pin-outline #outline-content .outline-active strong,
-.pin-outline .outline-active {
+/* ---------------->> 表头 <<---------------- */
+#write table tr th {
+    background-color: #42a5f53d;
     color: var(--theme-color);
     font-weight: 700
 }
-
-.active-tab-files #info-panel-tab-file .info-panel-tab-border,
-.active-tab-outline #info-panel-tab-outline .info-panel-tab-border {
-    background-color: var(--theme-color)
+body,
+script,
+text,
+.md-rawblock-after,
+.md-rawblock-before,
+code,
+pre,
+samp,
+tt {
+    font-family: var(--main-font-family);
+}
+:root {
+    --stroke: var(--theme-color);
+    --fill: var(--text-color);
 }
 
-/* ---------------->> 搜索框 <<---------------- */
-
-#md-searchpanel .btn label {
-    color: var(--theme-color);
-    font-weight: bold;
-}
-
-div#md-searchpanel {
-    background: var(--main-bg);
-}
-
-#md-searchpanel .btn {
-    text-align: center !important;
-    border-radius: 10px;
-    background: rgb(from var(--bg-color) r g b / 0.4);
-    margin: 0 2px;
-}
-
-#md-searchpanel .btn:hover {
-    background: var(--item-bg-color-blue);
-}
-
-
-/* ---------------->> 脚注 <<---------------- */
-#write .md-footnote {
-    margin-right: 2px;
-    margin-left: 2px;
-    line-height: 1;
+.md-diagram .md-diagram-panel {
     background: var(--theme-light-color);
-    color: var(--main-red);
-    font-weight: 700;
 }
 
+.md-diagram-panel.md-fences-adv-panel {
+    background: var(--theme-light-color);
+    fill: var(--text-color) !important;
+}
+
+pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
+    background: transparent !important;
+}
+
+.md-fences-adv-panel,
+.md-math-container,
+.md-mathjax-preview,
+text.actor>tspan,
+text.messageText,
+span.nodeLabel.markdown-node-label {
+    font-family: var(--main-font-family) !important;
+}
+/* ---------------->> 标题 <<---------------- */
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    margin: .72em 0;
+    padding: 0;
+    position: relative;
+    font-weight: lighter;
+}
+
+#write h2:hover:before {
+    bottom: .2rem;
+    content: "H2"
+}
+
+#write h3:hover:before {
+    bottom: .2rem;
+    content: "H3"
+}
+
+#write h4:hover:before {
+    bottom: .2rem;
+    content: "H4"
+}
+
+#write h5:hover:before {
+    bottom: .2rem;
+    content: "H5"
+}
+
+#write h6:hover:before {
+    bottom: .2rem;
+    content: "H6"
+}
+
+#write h2:hover:before,
+#write h3:hover:before,
+#write h4:hover:before,
+#write h5:hover:before,
+#write h6:hover:before {
+    line-height: 25px;
+    padding: 0 1px 0 1px;
+    bottom: 0;
+    color: var(--item-bg-color-blue);
+    font-size: .9rem;
+    position: absolute;
+    right: calc(100% + 3px);
+}
+
+#write h1 {
+    color: var(--theme-color);
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 0.3em;
+}
+
+#write h2 {
+    color: var(--theme-color);
+    font-size: 1.7rem;
+    margin: 1em 0;
+    border-bottom: 2px solid var(--theme-color);
+    padding-bottom: 0.2em;
+}
+
+
+#write h3 {
+    font-size: 1.5rem;
+    color: var(--theme-color);
+    padding-left: 15px;
+    position: relative;
+}
+
+#write h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    z-index: 0;
+}
+
+#write h4 {
+    font-size: 1.2rem;
+    width: fit-content;
+    color: white;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 1px 12.5px;
+    position: relative;
+    background: linear-gradient(to right, var(--theme-color), var(--main-green));
+    border-radius: var(--radius-small);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    transition: background-position 0.1s ease-in-out, color 0.3s ease-in-out;
+}
+
+#write h4:hover {
+    background-position: -100% -100%;
+}
+
+#write h5 {
+    font-size: 1.5rem;
+    width: fit-content;
+    color: var(--main-yellow);
+}
+
+#write h6 {
+    font-size: 1.2rem;
+    width: fit-content;
+    color: var(--main-green);
+}
 /* ---------------->> 列表 <<---------------- */
-#write .ol .li,
-#write .ul .li,
+#write ol,
+#write ul {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding-left: 40px !important;
+}
+
+#write li section {
+    font-size: .9rem;
+    font-size: .9rem;
+}
+
 #write ol li,
 #write ul li {
     list-style-type: none;
@@ -954,6 +1120,7 @@ div#md-searchpanel {
     border-color: transparent;
 }
 
+/* ---------------->> 有序列表前数字 <<---------------- */
 #write .ol>.li:before,
 #write ol>li:before {
     border-radius: .825em;
@@ -966,7 +1133,13 @@ div#md-searchpanel {
     margin-left: -25px;
     margin-top: 10px;
     text-align: center;
-    width: 1.65em
+    width: 1.65em;
+    transition: transform 0.5s;
+}
+
+#write .ol>.li:hover:before,
+#write ol>li:hover:before {
+    transform: rotate(720deg) !important;
 }
 
 #write .ol .li input,
@@ -975,6 +1148,314 @@ div#md-searchpanel {
 #write ul li input {
     margin-bottom: 0;
     margin-top: 0
+}
+
+/* ---------------->> todo列表-复选框 <<---------------- */
+
+#write input[type=checkbox] {
+    top: 10px;
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-left: -1.8em;
+}
+
+li.md-list-item.task-list-item.md-task-list-item::marker {
+    content: none;
+    font-size: inherit;
+}
+
+/* ---------------->> 删除线 <<---------------- */
+del {
+    color: grey;
+}@import '';
+@import '';
+@import '';
+@import '';
+@import '';
+@import '';
+
+/* 标题 */
+@import '';
+/* @import './onelight/style/title/title-colorful.css'; */
+/* @import './onelight/style/title/title-colorful-dark.css'; */
+
+/* 列表 */
+@import '';
+/* @import './onelight/style/list/list-simple.css'; */
+
+
+/* -------------------------------------------------------- */
+
+:root {
+    --bg-color: #f2f2f2;
+    --code-bg-color: #282c34;
+    --text-color: black;
+    --primary-btn-text-color: #fff;
+    --active-file-bg-color: #eee;
+    --window-border: 1px solid var(--active-file-bg-color);
+    --active-file-text-color: inherit;
+    --active-file-border-color: var(--main-red);
+    --side-bar-bg-color: var(--bg-color);
+    --item-hover-bg-color: hsla(0, 0%, 90%, .59);
+    --item-hover-text-color: var(--main-red);
+    --monospace: monospace;
+    --select-text-font-color: white !important;
+    --select-text-bg-color: #3266D0;
+    --side-bar-menu-active-tint: var(--main-green);
+    --outline-color: #a5a5a5;
+    --tb-border-color: #e8e8e8;
+    /* ---------------->> 主题色 <<---------------- */
+    --theme-color: #166ff3;
+    --main-red: #ff6b6b;
+    --main-green: #2ed573;
+    --main-purple: #c94ae9;
+    --main-yellow: #f9b03d;
+    --light-color: #b2b2b2;
+    --theme-light-color: white;
+    --code--bg-color: #282c34;
+    --code--bg-color-light: #3d404e;
+    --border-color: var(--theme-color);
+    --border: solid 0.5px var(--theme-color)94;
+    /* ---------------->> 字体 <<---------------- */
+    --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
+    /* ---------------->> 悬浮 <<---------------- */
+    --item-bg-color-red: rgb(from var(--main-red) r g b / 0.22);
+    --item-bg-color-blue: rgb(from var(--theme-color) r g b / 0.26);
+    /* ---------------->> 阴影 <<---------------- */
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
+    --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
+    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+    /* ---------------->> 过渡 <<---------------- */
+    --transition: box-shadow 0.3s ease, transform 0.3s ease;
+    --bg-transition: background-color 0.5s ease;
+    /* ---------------->> 左到右透明渐变色 <<---------------- */
+    --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
+    /* ---------------->> 圆角 <<---------------- */
+    --radius-small: 5px;
+    --radius-large: 10px;
+    --radius-xlarge: 15px;
+    /* ---------------->> 云母 <<---------------- */
+    --mica-bg: rgba(255, 255, 255, 0.65);
+    --mica-blur: blur(12px) saturate(1.3);
+    --mica-border: 1px solid rgba(255, 255, 255, 0.15);
+    --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    /* default base dark forest neutral night */
+    --mermaid-theme: default;
+}
+
+
+/* ---------------->> 段落 <<---------------- */
+#write p {
+    padding: 5px;
+    margin: 0;
+    line-height: 26px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+#write p:not(:has(.md-image)) {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+/* 仅在p标签不包含图片时应用悬停效果 */
+#write p:not(:has(.md-image)):hover {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius-large);
+    background: var(--theme-light-color);
+}
+
+#write p:has(.md-image):hover::before {
+    display: none;
+}
+
+#write p[align="center"]:hover {
+    width: inherit;
+}
+
+/* ---------------->> 粗体 <<---------------- */
+#write strong {
+    color: var(--theme-color);
+    font-weight: 700
+}
+
+/* ---------------->> 链接 <<---------------- */
+a>span.md-plain,
+a.md-url,
+a {
+    margin-left: 1px;
+    margin-right: 1px;
+    color: var(--main-purple);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.md-alert a>span.md-plain,
+.md-alert a.md-url,
+.md-alert a {
+    color: var(--main-purple) !important;
+}
+
+/* 目录中取消链接箭头 */
+#write a.md-toc-inner::after {
+    background: unset;
+}
+
+/* 表格组件取消链接箭头 */
+.md-reset>a::after {
+    content: none !important;
+}
+
+/* 图片链接取消链接箭头 */
+a:has(img)::after {
+    display: none !important;
+}
+
+/* 取消四级标题的链接效果 */
+h4.md-end-block.md-heading a,
+h4.md-end-block.md-heading a>span {
+    color: white;
+    text-decoration: none;
+}
+
+/* 去除6级标题链接下划线 */
+h6.md-end-block.md-heading a,
+h6.md-end-block.md-heading a>span {
+    text-decoration: none;
+}
+
+/* 取消 h4 标题中链接的箭头效果 */
+#write h4.md-end-block.md-heading a::after {
+    content: none;
+    display: none;
+}
+
+/* 链接箭头 */
+#write a::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.1em;
+    height: 1.1em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c94ae9'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E");
+}
+
+/* ---------------->> 目录项 <<---------------- */
+a.md-toc-inner {
+    color: var(--main-purple);
+}
+
+#write p.md-toc-content:hover {
+    width: inherit;
+}
+
+#write code {
+    background-color: var(--item-hover-bg-color);
+    color: #eb4c37;
+    font-family: var(--main-font-family);
+    font-size: .9rem;
+    font-size: .9rem;
+}
+
+#write li code,
+#write p code,
+#write span code {
+    border-radius: var(--radius-small);
+    margin: 0 2px;
+    padding: 2px 4px;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+/* ---------------->> 图片 <<---------------- */
+#write img {
+    border-left: 0;
+    border-right: 0;
+    filter: var(--drop-shadow);
+    border-radius: var(--radius-small);
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    transition: var(--transition);
+    width: auto;
+}
+
+#write img:hover {
+    box-shadow: var(--box-shadow-large);
+}
+
+/* ---------------->> 脚注 <<---------------- */
+.md-def-name {
+    padding-right: 3ch;
+}
+
+.md-footnote {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+/* ---------------->> 高亮 <<---------------- */
+mark {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: var(--radius-large);
+    padding: 2px 5px 2px 5px;
+    border: 1.5px solid;
+    background: transparent;
+    color: var(--main-red);
+}
+
+
+.searchpanel-search-option-btn.active {
+    animation: colorChange 1s infinite;
+    color: var(--theme-color)
+}
+
+span#filesearch-case-option-btn:active {
+    color: var(--theme-color)
+}
+
+.md-inline-math-container mjx-container {
+    zoom: 1
+}
+
+.md-expand.md-img-loaded>.md-meta>span,
+.md-image>.md-meta {
+    color: var(--theme-color);
+    font-family: var(--main-font-family)
+}
+
+.outline-item-active {
+    background: var(--item-bg-color-blue);
+    border-left: 28px solid transparent;
+    margin-left: -28px;
+    margin-right: -28px
+}
+
+.pin-outline #outline-content .outline-active strong,
+.pin-outline .outline-active {
+    color: var(--theme-color);
+    font-weight: 700
+}
+
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border {
+    background-color: var(--theme-color)
+}
+
+/* ---------------->> 脚注 <<---------------- */
+#write .md-footnote {
+    margin-right: 2px;
+    margin-left: 2px;
+    line-height: 1;
+    background: var(--theme-light-color);
+    color: var(--main-red);
+    font-weight: 700;
 }
 
 .md-fences:not(.md-focus) .CodeMirror-code>:hover {
@@ -1008,37 +1489,6 @@ p.md-toc-content:hover {
     background: var(--theme-light-color);
 }
 
-/* ---------------->> 底部状态栏 <<---------------- */
-#footer-word-count:hover,
-.ty-show-spell-check #footer-spell-check,
-.ty-show-word-count #footer-word-count {
-    background: #eee;
-    color: var(--theme-color);
-}
-
-.footer-item:hover,
-.sidebar-footer-item:hover {
-    color: var(--theme-color);
-}
-
-/* ---------------->> 显示/隐藏侧边栏 <<---------------- */
-#outline-btn:hover {
-    color: var(--theme-color)
-}
-
-/* ---------------->> meta代码块 <<---------------- */
-#write>pre.md-meta-block.md-end-block {
-    background: var(--theme-light-color) !important;
-    border-radius: var(--radius-large);
-    box-shadow: var(--box-shadow);
-    padding: 10px;
-    transition: var(--transition)
-}
-
-#write>pre.md-meta-block.md-end-block:hover,
-#write>pre.md-meta-block.md-end-block:focus {
-    box-shadow: var(--box-shadow-large);
-}
 
 .info-panel-tab-title:hover,
 .outline-label:hover {
@@ -1057,25 +1507,6 @@ p.md-toc-content:hover {
     color: #999;
     text-decoration: line-through
 }
-
-/* ---------------->> 左侧文件树 <<---------------- */
-.file-library-node.file-tree-node.file-library-file-node.active,
-.file-node-content:hover {
-    color: var(--theme-color)
-}
-
-.file-library-node:not(.file-node-root):focus>.file-node-content {
-    outline: unset;
-}
-
-.file-node-content {
-    cursor: pointer;
-}
-
-.fa-file-text-o:before {
-    content: '📄';
-}
-
 
 
 .fa-folder:before,
@@ -1206,71 +1637,6 @@ input:focus {
 }
 
 
-
-
-
-/* ---------------->> 任务列表按钮 <<---------------- */
-.ty-check:before {
-    color: #00bb00;
-}
-
-/* ---------------->> 删除按钮 <<---------------- */
-.ty-delete1:before {
-    color: var(--main-red);
-}
-
-/* ---------------->> 代码按钮 <<---------------- */
-.ty-code:before {
-    color: var(--main-purple);
-}
-
-/* ---------------->> 链接按钮 <<---------------- */
-.ty-link-icon:before {
-    color: var(--theme-color);
-}
-
-
-/* ---------------->> 右键菜单 <<---------------- */
-.dropdown-menu,
-.menu-item-container a.menu-style-btn {
-    border-radius: var(--radius-large);
-    background-color: var(--mica-bg) !important;
-    backdrop-filter: var(--mica-blur);
-    -webkit-backdrop-filter: var(--mica-blur);
-    border: var(--mica-border);
-    box-shadow: var(--box-shadow);
-    transition: var(--mica-transition);
-}
-
-.dropdown-menu .divider {
-    opacity: 0;
-}
-
-
-.context-menu.dropdown-menu>.active>a,
-.context-menu.dropdown-menu>li>a:hover,
-.menu-style-btn.active {
-    cursor: pointer;
-    border-radius: var(--radius-large);
-    background: var(--item-bg-color-blue);
-    color: var(--theme-color)
-}
-
-.context-menu {
-    padding-bottom: 0;
-}
-
-.ty-bold:before {
-    font-weight: bold;
-}
-
-.menu-item-container a.menu-style-btn.active,
-.menu-item-container a.menu-style-btn:hover {
-    background-color: var(--item-bg-color-blue) !important;
-}
-
-
-
 /* ---------------->> 高亮标签 <<---------------- */
 span[alt=highlight] {
     margin-right: 2px;
@@ -1304,77 +1670,10 @@ span[alt=highlight] {
 }
 
 
-/* ---------------->> 主界面背景图片 <<---------------- */
-content {
-    background-color: transparent;
-    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg.gif');
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 100px auto;
-    transition: background-image .5s ease-in-out, background-size .5s ease-in-out
-}
-
-
-/* ---------------->> 一体化菜单界面背景图片 <<---------------- */
-div#megamenu-section-open {
-    background-color: transparent;
-    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg4.gif');
-    background-position: 100% 0%;
-    background-repeat: no-repeat;
-    background-size: 100px auto;
-    transition: background-image .5s ease-in-out, background-size .5s ease-in-out;
-}
-
-.megamenu-opened header {
-    background-image: unset;
-}
-
-/* ---------------->> 一体化模式-打开 <<---------------- */
-.megamenu-menu-panel:not(:first-of-type) {
-    margin-top: 10px;
-}
-
-/* ---------------->> 一体化模式-打开-最近打开文件列表 <<---------------- */
-ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
-    border-radius: var(--radius-small);
-}
-
-/* ---------------->> 一体化模式-已保存 <<---------------- */
-a#m-saved:hover {
-    cursor: unset;
-}
-
-a#megamenu-clear-recet-documents:hover {
-    background: transparent;
-}
-
 .CodeMirror-gutters {
     border-right: unset
 }
 
-.megamenu-menu-header {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background: #2e2e2e;
-    border-bottom: unset;
-    height: 90px;
-    position: relative;
-    text-align: center
-}
-
-.ion-android-arrow-back:before {
-    content: "<-";
-    font-family: cascadia code, fira code, var(--main-font-family)
-}
-
-a#megamenu-back-btn:hover {
-    color: var(--theme-color)
-}
-
-#megamenu-back-btn {
-    border: 0;
-    font-size: 25px
-}
 
 footer.ty-footer {
     border-top: 0
@@ -1442,250 +1741,12 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
     text-decoration: underline
 }
 
-/* ---------------->> 一体化模式的侧边菜单 <<---------------- */
-ul#megamenu-menu-list {
-    height: 100%;
-    background: transparent;
-}
-
-/* ---------------->> 一体化模式最近打开文件列表 <<---------------- */
-.megamenu-menu-panel table {
-    font-weight: unset;
-}
-
-/* ---------------->> mermaid <<---------------- */
-.md-diagram-panel.md-fences-adv-panel {
-    background: var(--theme-light-color);
-}
-
-pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
-    background: transparent !important;
-}
-
-
-
-/* ---------------->> 代码框右下角的语言类型显示 <<---------------- */
-pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
-    content: attr(lang);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #e0e0e0;
-    padding: 2px 5px;
-    border-radius: var(--radius-small);
-    z-index: 20;
-}
-
-
-/* ---------------->> 代码块文本 <<---------------- */
-pre.CodeMirror-line>span {
-    color: var(--light-color);
-}
-
-.md-rawblock-tooltip-name {
-    color: var(--theme-color);
-}
-
-
-
-/* ---------------->> 左侧文档列表 <<---------------- */
-.file-list-item.active {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: #efefef;
-    background: var(--item-bg-color-blue);
-    color: var(--active-file-text-color);
-}
-
-.file-list-item:hover {
-    color: var(--theme-color);
-    background: #42a5f514;
-}
-
-/* ---------------->> 滚动条 <<---------------- */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
-}
-
-::-webkit-scrollbar:hover {
-    height: 10px;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: var(--radius-small);
-    background: rgba(0, 0, 0, .1);
-    width: 10px
-}
-
-/* ---------------->> 一体化-返回按钮 <<---------------- */
-span.megamenu-menu-header-title-back[data-localize=Back]:hover {
-    color: var(--theme-color);
-}
-
-/* ---------------->> 一体化-主题预览卡片 <<---------------- */
-.theme-preview-div {
-    cursor: pointer;
-}
-
-
-/* ---------------->> 快速打开搜索框 <<---------------- */
-#typora-quick-open {
-    border-radius: var(--radius-small);
-}
-
-.typora-quick-open-item:hover {
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    color: var(--theme-color);
-    background: var(--theme-light-color);
-}
-
-/* ---------------->> 快速打开搜索框高亮结果 <<---------------- */
-.typora-quick-open-item-title>b {
-    border-radius: var(--radius-small);
-    padding: 2px;
-    color: red;
-    background: yellow;
-}
-
-.typora-quick-open-item.active {
-    background: var(--item-bg-color-blue);
-}
-
-
-
-
-/* ---------------->> 大纲参考线 <<---------------- */
-.outline-h1::after,
-.outline-h2::after,
-.outline-h3::after,
-.outline-h4::after,
-.outline-h5::after,
-.outline-h6::after {
-    content: "";
-    height: calc(100% - 25px);
-    width: 1.3px;
-    background: transparent;
-    position: absolute;
-    top: 25px;
-}
-
-li.outline-item-wrapper.outline-h1.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 6.5px;
-}
-
-li.outline-item-wrapper.outline-h2.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 20px;
-}
-
-li.outline-item-wrapper.outline-h3.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 34px;
-}
-
-li.outline-item-wrapper.outline-h4.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 48.5px;
-}
-
-li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children > li)::after {
-    background: var(--outline-color);
-    left: 62.5px;
-}
-
-/* ---------------->> 折叠箭头 <<---------------- */
-.outline-expander:before {
-    font-weight: bold;
-}
-
-
-
-
-.cm-s-inner .cm-link,
-.cm-s-inner.cm-link {
-    color: var(--theme-color);
-}
-
-.theme-preview-div:hover {
-    border-color: var(--main-green);
-}
-
-.theme-preview-div.active>i::before {
-    color: var(--main-green);
-}
-
-#theme-preview-grid {
-    max-width: fit-content;
-}
-
-
-/* ---------------->> 警告框样式 <<---------------- */
-/* ---------------->> 提示 <<---------------- */
-.md-alert {
-    --border: solid 1px var(--border-color);
-    background: var(--gradient-color);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: var(--box-shadow);
-    transition: var(--bg-transition);
-}
-
-/* ---------------->> 不同类型的警告框颜色 <<---------------- */
-.md-alert-tip {
-    --border-color: #1f883d;
-}
-
-.md-alert-note {
-    --border-color: #0969da;
-}
-
-.md-alert-important {
-    --border-color: #8250df;
-}
-
-.md-alert-caution {
-    --border-color: #cf222e;
-}
-
-.md-alert-warning {
-    --border-color: #faad14;
-}
-
-/* ---------------->> 边框 <<---------------- */
-.md-alert {
-    border: var(--border);
-    border-left: 5px solid var(--border-color);
-    border-left-color: var(--border-color) !important;
-}
-
-/* ---------------->> 悬浮样式 <<---------------- */
-.md-alert:hover {
-    background: var(--theme-light-color) !important;
-    box-shadow: var(--box-shadow-large);
-}
-
-/* ---------------->> 警告框下段落悬浮样式重置 <<---------------- */
-blockquote p:hover,
-.md-alert p:hover {
-    background: transparent !important;
-    box-shadow: unset !important;
-}
-
-/* ---------------->> 警告框内文本颜色 <<---------------- */
-div.md-alert span[md-inline="plain"].md-plain,
-span.md-alert-text-container {
-    color: var(--border-color);
-}
-
-/* ---------------->> 警告框内列表样式 <<---------------- */
-.md-alert li.md-list-item::before,
-.md-alert ul li::before,
-.md-alert ol li::before {
-    background: var(--border-color) !important;
+/* 修复emoji在标题中的显示问题 */
+span[alt="plain"]>span.md-plain {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: initial;
 }
 
 :root {
@@ -1696,7 +1757,7 @@ span.md-alert-text-container {
 /* ---------------->> 主界面背景图片 <<---------------- */
 /* content { 
     background-color: transparent !important; 
-    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg3.gif') !important; 
+    background-image: url('../img/Nijika.gif') !important; 
     background-position: 100% 100% !important; 
     background-repeat: no-repeat !important; 
     background-size: 200px auto !important; 
@@ -1706,7 +1767,7 @@ span.md-alert-text-container {
 /* ---------------->> 导出时保留背景图片 <<---------------- */
 @media print {
     body {
-        background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg3.gif') !important;
+        background-image: url('../img/Nijika.gif') !important;
         background-position: 100% 100% !important;
         background-repeat: no-repeat !important;
         background-size: 200px auto !important;
@@ -1715,7 +1776,7 @@ span.md-alert-text-container {
     }
 
     #write {
-        background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg3.gif') !important;
+        background-image: url('../img/Nijika.gif') !important;
         background-position: 100% 100% !important;
         background-repeat: no-repeat !important;
         background-size: 200px auto !important;
@@ -1728,7 +1789,7 @@ span.md-alert-text-container {
 /* @page {
     margin: 1cm;
     size: auto;
-    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg3.gif') !important;
+    background-image: url('../img/Nijika.gif') !important;
     background-position: 100% 100% !important;
     background-repeat: no-repeat !important;
     background-size: 200px auto !important;
@@ -1738,7 +1799,7 @@ span.md-alert-text-container {
 
 /* 确保HTML导出时也能显示背景图 */
 .typora-export {
-    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg3.gif') !important;
+    background-image: url('../img/Nijika.gif') !important;
     background-position: 100% 100% !important;
     background-repeat: no-repeat !important;
     background-size: 200px auto !important;
@@ -1746,13 +1807,13 @@ span.md-alert-text-container {
 
 /* 确保HTML导出时也能显示一体化菜单背景图 */
 .typora-export div#megamenu-section-open {
-    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg3.gif') !important;
+    background-image: url('../img/Nijika.gif') !important;
 }
 
 /* ---------------->> 一体化菜单界面背景图片 <<---------------- */
 /* div#megamenu-section-open {
     background-color: transparent !important;
-    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg3.gif') !important;
+    background-image: url('../img/Nijika.gif') !important;
     background-position: 100% 0% !important;
     background-repeat: no-repeat !important;
     background-size: 100px auto !important;
@@ -1761,7 +1822,7 @@ span.md-alert-text-container {
 </style><title>index</title>
 </head>
 <body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
-<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linuxc">1.Linux/C</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linux基础">1.Linux基础</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2gnu工具集">2.GNU工具集</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3文件系统编程">3.文件系统编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4进程">4.进程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5linux多线程编程">5.Linux多线程编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6网络编程">6.网络编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7进程池和线程池">7.进程池和线程池</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8mysql">8.MySQL</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2c++">2.C++</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1c++与c">1.C++与C</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2类与对象">2.类与对象</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3c++输入输出流">3.C++输入输出流</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4log4cpphttpscharnariegithubiolearning-noteshtml4log4cpphtml">4.log4cpp</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h3 id='1linuxc'><span>1.Linux/C</span></h3><h4 id='1linux基础'><a href='https://charnarie.github.io/Learning-notes/HTML/1.Linux基础.html'><span>1.Linux基础</span></a></h4><h4 id='2gnu工具集'><a href='https://charnarie.github.io/Learning-notes/HTML/2.GNU工具集.html'><span>2.GNU工具集</span></a></h4><h4 id='3文件系统编程'><a href='https://charnarie.github.io/Learning-notes/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a></h4><h4 id='4进程'><a href='https://charnarie.github.io/Learning-notes/HTML/4.进程.html'><span>4.进程</span></a></h4><h4 id='5linux多线程编程'><a href='https://charnarie.github.io/Learning-notes/HTML/5.Linux多线程编程.html'><span>5.Linux多线程编程</span></a></h4><h4 id='6网络编程'><a href='https://charnarie.github.io/Learning-notes/HTML/6.网络编程.html'><span>6.网络编程</span></a></h4><h4 id='7进程池和线程池'><a href='https://charnarie.github.io/Learning-notes/HTML/7.进程池和线程池.html'><span>7.进程池和线程池</span></a></h4><h4 id='8mysql'><a href='https://charnarie.github.io/Learning-notes/HTML/8.MySQL.html'><span>8.MySQL</span></a></h4><h3 id='2c++'><span>2.C++</span></h3><h4 id='1c++与c'><a href='https://charnarie.github.io/Learning-notes/HTML/1.C++与C.html'><span>1.C++与C</span></a></h4><h4 id='2类与对象'><a href='https://charnarie.github.io/Learning-notes/HTML/2.类与对象.html'><span>2.类与对象</span></a></h4><h4 id='3c++输入输出流'><a href='https://charnarie.github.io/Learning-notes/HTML/3.C++输入输出流.html'><span>3.C++输入输出流</span></a></h4><h4 id='4log4cpphttpscharnariegithubiolearning-noteshtml4log4cpphtml'><a href='https://charnarie.github.io/Learning-notes/HTML/4.log4cpp.html'><span>4.log4cpp</span></a></h4></div></div>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linuxc">1.Linux/C</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linux基础">1.Linux基础  </a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2gnu工具集">2.GNU工具集  </a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3文件系统编程">3.文件系统编程  </a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4进程">4.进程  </a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5linux多线程编程">5.Linux多线程编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6网络编程">6.网络编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7进程池和线程池">7.进程池和线程池</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8mysql">8.MySQL</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2c++">2.C++</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1c++与c">1.C++与C</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2类与对象">2.类与对象</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3c++输入输出流">3.C++输入输出流</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4log4cpp">4.log4cpp</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5运算符重载">5.运算符重载</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6set与map">6.set与map</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7继承">7.继承</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8多态">8.多态</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#9vptr与vtable">9.vptr与vtable</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#10模板">10.模板</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#11移动语义与资源管理httpscharnariegithubiolearning-noteshtml11移动语义与资源管理html">11.移动语义与资源管理</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h2 id='1linuxc'><span>1.Linux/C</span></h2><h3 id='1linux基础'><a href='https://charnarie.github.io/Learning-notes/HTML/1.Linux基础.html'><span>1.Linux基础</span></a><span>  </span></h3><h3 id='2gnu工具集'><a href='https://charnarie.github.io/Learning-notes/HTML/2.GNU工具集.html'><span>2.GNU工具集</span></a><span>  </span></h3><h3 id='3文件系统编程'><a href='https://charnarie.github.io/Learning-notes/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a><span>  </span></h3><h3 id='4进程'><a href='https://charnarie.github.io/Learning-notes/HTML/4.进程.html'><span>4.进程</span></a><span>  </span></h3><h3 id='5linux多线程编程'><a href='https://charnarie.github.io/Learning-notes/HTML/5.Linux多线程编程.html'><span>5.Linux多线程编程</span></a></h3><h3 id='6网络编程'><a href='https://charnarie.github.io/Learning-notes/HTML/6.网络编程.html'><span>6.网络编程</span></a></h3><h3 id='7进程池和线程池'><a href='https://charnarie.github.io/Learning-notes/HTML/7.进程池和线程池.html'><span>7.进程池和线程池</span></a></h3><h3 id='8mysql'><a href='https://charnarie.github.io/Learning-notes/HTML/8.MySQL.html'><span>8.MySQL</span></a></h3><h2 id='2c++'><span>2.C++</span></h2><h3 id='1c++与c'><a href='https://charnarie.github.io/Learning-notes/HTML/1.C++与C.html'><span>1.C++与C</span></a></h3><h3 id='2类与对象'><a href='https://charnarie.github.io/Learning-notes/HTML/2.类与对象.html'><span>2.类与对象</span></a></h3><h3 id='3c++输入输出流'><a href='https://charnarie.github.io/Learning-notes/HTML/3.C++输入输出流.html'><span>3.C++输入输出流</span></a></h3><h3 id='4log4cpp'><a href='https://charnarie.github.io/Learning-notes/HTML/4.log4cpp.html'><span>4.log4cpp</span></a></h3><h3 id='5运算符重载'><a href='https://charnarie.github.io/Learning-notes/HTML/5.运算符重载.html'><span>5.运算符重载</span></a></h3><h3 id='6set与map'><a href='https://charnarie.github.io/Learning-notes/HTML/6.set与map.html'><span>6.set与map</span></a></h3><h3 id='7继承'><a href='https://charnarie.github.io/Learning-notes/HTML/7.继承.html'><span>7.继承</span></a></h3><h3 id='8多态'><a href='https://charnarie.github.io/Learning-notes/HTML/8.多态.html'><span>8.多态</span></a></h3><h3 id='9vptr与vtable'><a href='https://charnarie.github.io/Learning-notes/HTML/9.vptr与vtable.html'><span>9.vptr与vtable</span></a></h3><h3 id='10模板'><a href='https://charnarie.github.io/Learning-notes/HTML/10.模板.html'><span>10.模板</span></a></h3><h3 id='11移动语义与资源管理httpscharnariegithubiolearning-noteshtml11移动语义与资源管理html'><a href='https://charnarie.github.io/Learning-notes/HTML/11.移动语义与资源管理.html'><span>11.移动语义与资源管理</span></a></h3></div></div>
 
 <script>(function(){function e(e,n,i){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var t=e.target;t&&t!=this;t=t.parentNode)if(t.matches(n)){!1===i.call(t,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)}var t=document.body.parentElement,i=[],r=null,o=document.body.classList.contains("typora-export-collapse-outline");function a(){return t.scrollTop}e("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),u(),!1}),e("click",".outline-item",function(e){var t=this.querySelector(".outline-label");location.hash="#"+t.getAttribute("href"),o&&((t=this.closest(".outline-item-wrapper").classList).contains("outline-item-open")||t.add("outline-item-open"),d(),t.add("outline-item-active"))});function s(){var e=a();r=null;for(var t=0;t<i.length&&i[t][1]-e<60;t++)r=i[t]}function n(){c=setTimeout(function(){var n;i=[],n=a(),document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(e=>{var t=e.getAttribute("id");i.push([t,n+e.getBoundingClientRect().y])}),s(),u()},300)}var l,c,d=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},u=function(){if(r&&(d(),t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(r[0]):r[0])+'"]')))if(o){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var t,n=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");n;)n=(t=n).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")};window.addEventListener("scroll",function(e){l&&clearTimeout(l),l=setTimeout(function(){s(),u()},300)});window.addEventListener("resize",function(e){c&&clearTimeout(c),n()}),n()})();</script></body>
 </html>

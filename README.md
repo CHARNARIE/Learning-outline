@@ -28,7 +28,7 @@
 
 ### [5.运算符重载](https://charnarie.github.io/Learning-notes/HTML/5.运算符重载.html)
 
-### [6.关联式容器简介](https://charnarie.github.io/Learning-notes/HTML/6.关联式容器简介.html)
+### [6.set与map](https://charnarie.github.io/Learning-notes/HTML/6.set与map.html)
 
 ### [7.继承](https://charnarie.github.io/Learning-notes/HTML/7.继承.html)
 
