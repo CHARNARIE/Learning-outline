@@ -1,6 +1,6 @@
 # 1.Linux/C
 
-[1.Linux基础](https://charnarie.github.io/Learning-outline/HTML/1.Linux基础.html)  
+[1.Linux基础命令](https://charnarie.github.io/Learning-outline/HTML/1.Linux基础命令.html)  
 
 [2.GNU工具集](https://charnarie.github.io/Learning-outline/HTML/2.GNU工具集.html)  
 
