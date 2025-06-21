@@ -1,0 +1,7 @@
+exclude:
+  - C/
+  - CPP/
+  - "*.md"  # 排除所有 md 文件（除了特定的）
+
+include:
+  - README.md
