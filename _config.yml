@@ -2,6 +2,3 @@ exclude:
   - C/
   - CPP/
   - "*.md" 
-
-include:
-  - README.md
