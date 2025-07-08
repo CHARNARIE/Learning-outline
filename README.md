@@ -1,5 +1,3 @@
-[toc]
-
 # 1.Linux/C
 
 [1.shell和vim命令](https://charnarie.github.io/Learning-outline/HTML/1.shell和vim命令.html)  
