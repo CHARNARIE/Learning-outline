@@ -236,98 +236,6 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
-/* ---------------->> 引用块 <<---------------- */
-#write blockquote {
-    background: var(--gradient-color);
-    border-bottom-right-radius: 10px;
-    border-left: 5px solid var(--border-color);
-    border-top-right-radius: 10px;
-    box-shadow: var(--box-shadow);
-    color: rgb(from var(--text-color) r g b / 0.85);
-    font-size: .9em;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 10px 10px 10px 20px;
-    transition: var(--bg-transition)
-}
-
-#write blockquote:hover {
-    transition: var(--bg-transition);
-    background: var(--bg-color);
-    box-shadow: var(--box-shadow-large);
-}
-
-#write blockquote p {
-    line-height: 26px
-}
-
-
-/* ---------------->> 警告框样式 <<---------------- */
-/* ---------------->> 提示 <<---------------- */
-.md-alert {
-    --border: solid 1px var(--border-color);
-    background: var(--gradient-color);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: var(--box-shadow);
-    transition: var(--bg-transition);
-}
-
-/* ---------------->> 不同类型的警告框颜色 <<---------------- */
-.md-alert-tip {
-    --border-color: #1f883d;
-}
-
-.md-alert-note {
-    --border-color: #0969da;
-}
-
-.md-alert-important {
-    --border-color: #8250df;
-}
-
-.md-alert-caution {
-    --border-color: #cf222e;
-}
-
-.md-alert-warning {
-    --border-color: #faad14;
-}
-
-/* ---------------->> 边框 <<---------------- */
-.md-alert {
-    border: var(--border);
-    border-left: 5px solid var(--border-color);
-    border-left-color: var(--border-color) !important;
-}
-
-/* ---------------->> 悬浮样式 <<---------------- */
-.md-alert:hover {
-    background: var(--theme-light-color) !important;
-    box-shadow: var(--box-shadow-large);
-}
-
-/* ---------------->> 警告框下段落悬浮样式重置 <<---------------- */
-blockquote p:hover,
-.md-alert p:hover {
-    background: transparent !important;
-    box-shadow: unset !important;
-}
-
-/* ---------------->> 警告框内文本颜色 <<---------------- */
-div.md-alert span[md-inline="plain"].md-plain,
-span.md-alert-text-container {
-    color: var(--border-color);
-}
-
-/* ---------------->> 警告框内列表样式 <<---------------- */
-.md-alert li.md-list-item::before,
-.md-alert ul li::before,
-.md-alert ol li::before {
-    background: var(--border-color) !important;
-}
 #write {
     letter-spacing: 0;
     text-align: left
@@ -927,7 +835,6 @@ span.nodeLabel.markdown-node-label {
     margin: .72em 0;
     padding: 0;
     position: relative;
-    font-weight: lighter;
 }
 
 #write h2:hover:before {
@@ -972,14 +879,13 @@ span.nodeLabel.markdown-node-label {
 #write h1 {
     color: var(--theme-color);
     font-size: 2.5rem;
-    font-weight: lighter;
     text-align: center;
     padding-bottom: 0.3em;
 }
 
 #write h2 {
     color: var(--theme-color);
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin: 1em 0;
     border-bottom: 2px solid var(--theme-color);
     padding-bottom: 0.2em;
@@ -987,7 +893,7 @@ span.nodeLabel.markdown-node-label {
 
 
 #write h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--theme-color);
     padding-left: 15px;
     position: relative;
@@ -1006,7 +912,7 @@ span.nodeLabel.markdown-node-label {
 }
 
 #write h4 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: fit-content;
     color: white;
     line-height: 1.6;
@@ -1025,7 +931,7 @@ span.nodeLabel.markdown-node-label {
 }
 
 #write h5 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: fit-content;
     color: var(--main-yellow);
 }
@@ -1168,21 +1074,115 @@ li.md-list-item.task-list-item.md-task-list-item::marker {
 /* ---------------->> 删除线 <<---------------- */
 del {
     color: grey;
+}
+/* ---------------->> 引用块 <<---------------- */
+#write blockquote {
+    background: var(--gradient-color);
+    border-bottom-right-radius: 10px;
+    border-left: 5px solid var(--theme-color);
+    border-top-right-radius: 10px;
+    box-shadow: var(--box-shadow);
+    color: rgb(from var(--text-color) r g b / 0.8);
+    font-size: .9em;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 10px 10px 20px;
+    transition: var(--bg-transition)
+}
+
+#write blockquote:hover {
+    transition: var(--bg-transition);
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow-large);
+}
+
+#write blockquote p {
+    line-height: 26px
+}
+
+
+/* ---------------->> 不同类型的警告框 <<---------------- */
+.md-alert-tip {
+    --alert-theme-color: rgb(31, 136, 61);
+    --color-rgb: 31, 136, 61;
+}
+
+.md-alert-note {
+    --alert-theme-color: rgb(9, 105, 218);
+}
+
+.md-alert-important {
+    --alert-theme-color: rgb(130, 80, 223);
+}
+
+.md-alert-caution {
+    --alert-theme-color: rgb(207, 34, 46);
+}
+
+.md-alert-warning {
+    --alert-theme-color: rgb(250, 173, 20);
+
+    .md-alert-text-container[data-text="warning"] {
+        color: rgb(250, 173, 20);
+    }
+}
+
+
+/* ---------------->> GH风格警告框 <<---------------- */
+.md-alert {
+    border-color: var(--alert-theme-color);
+    border-left-color: var(--alert-theme-color) !important;
+    border-radius: 10px;
+    background: rgb(from var(--alert-theme-color) r g b / 0.2);
+    box-shadow: var(--box-shadow);
+    transition: var(--bg-transition);
+    border: solid 2px var(--alert-theme-color);
+    transition: backdrop-filter 0.3s ease-in-out;
+
+    &:hover {
+        backdrop-filter: blur(10px);
+    }
+
+    li code,
+    p code,
+    span code {
+        background: var(--alert-theme-color) !important;
+        color: white !important;
+    }
+
+    .ol .li:before,
+    .ul .li:before,
+    ol li:before,
+    ul li:before {
+        background: var(--alert-theme-color) !important;
+    }
+}
+
+
+/* ---------------->> 警告框内段落悬浮样式重置 <<---------------- */
+blockquote p:hover,
+.md-alert p:hover {
+    background: transparent !important;
+    box-shadow: unset !important;
 }@import '';
 @import '';
 @import '';
 @import '';
 @import '';
-@import '';
 
-/* 标题 */
+/* 标题样式 依次为 默认 彩色 */
 @import '';
 /* @import './onelight/style/title/title-colorful.css'; */
-/* @import './onelight/style/title/title-colorful-dark.css'; */
 
-/* 列表 */
+/* 列表样式 依次为 默认 普通 */
 @import '';
 /* @import './onelight/style/list/list-simple.css'; */
+
+/* 引用块，警告框样式 依次为 原样式 默认*/
+/* @import './onelight/style/blockquote/blockquote.css'; */
+@import '';
 
 
 /* -------------------------------------------------------- */
@@ -1819,10 +1819,10 @@ span[alt="plain"]>span.md-plain {
     background-size: 100px auto !important;
     transition: background-image .5s ease-in-out, background-size .5s ease-in-out !important;
 } */
-</style><title>index</title>
+</style><title>README</title>
 </head>
 <body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
-<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linuxc">1.Linux/C</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2c++">2.C++</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><h1 id='1linuxc'><span>1.Linux/C</span></h1><p><a href='https://charnarie.github.io/Learning-outline/HTML/1.Linux基础命令.html'><span>1.Linux基础命令</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/2.GNU工具集.html'><span>2.GNU工具集</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/4.进程.html'><span>4.进程</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/5.Linux多线程编程.html'><span>5.Linux多线程编程</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/6.网络编程.html'><span>6.网络编程</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/7.进程池和线程池.html'><span>7.进程池和线程池</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/8.MySQL.html'><span>8.MySQL</span></a></p><h1 id='2c++'><span>2.C++</span></h1><p><a href='https://charnarie.github.io/Learning-outline/HTML/1.C++与C.html'><span>1.C++与C</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/2.类与对象.html'><span>2.类与对象</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/3.C++输入输出流.html'><span>3.C++输入输出流</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/4.log4cpp.html'><span>4.log4cpp</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/5.运算符重载.html'><span>5.运算符重载</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/6.set与map简介.html'><span>6.set与map简介</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/7.继承.html'><span>7.继承</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/8.多态.html'><span>8.多态</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/9.vptr与vtable.html'><span>9.vptr与vtable</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/10.模板.html'><span>10.模板</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/11.移动语义与资源管理.html'><span>11.移动语义与资源管理</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/12.哈希.html'><span>12.哈希</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/13.STL-容器.html'><span>13.STL-容器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/14.STL-迭代器.html'><span>14.STL-迭代器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/15.STL-算法.html'><span>15.STL-算法</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/16.STL-适配器.html'><span>16.STL-适配器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/17.STL-函数对象.html'><span>17.STL-函数对象</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/18.STL-空间配置器.html'><span>18.STL-空间配置器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/19.面向对象设计原则.html'><span>19.面向对象设计原则</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/20.常用设计模式.html'><span>20.常用设计模式</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/21.C++11线程.html'><span>21.C++11线程</span></a></p></div></div>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1linuxc">1.Linux/C</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2c++">2.C++</a></div><ul class="outline-children"></ul></li></div></div><div id='write'  class=''><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n84"><a class="md-toc-inner" href="#1linuxc">1.Linux/C</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n43"><a class="md-toc-inner" href="#2c++">2.C++</a></span></p></div><h1 id='1linuxc'><span>1.Linux/C</span></h1><p><a href='https://charnarie.github.io/Learning-outline/HTML/1.shell和vim命令.html'><span>1.shell和vim命令</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/2.GCC编译和GDB.html'><span>2.GCC编译和GDB</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/3.文件系统编程.html'><span>3.文件系统编程</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/4.进程.html'><span>4.进程</span></a><span>  </span></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/5.多线程编程.html'><span>5.多线程编程</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/6.网络编程.html'><span>6.网络编程</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/7.进程池和线程池.html'><span>7.进程池和线程池</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/8.MySQL.html'><span>8.MySQL</span></a></p><h1 id='2c++'><span>2.C++</span></h1><p><a href='https://charnarie.github.io/Learning-outline/HTML/1.C++与C.html'><span>1.C++与C</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/2.类与对象.html'><span>2.类与对象</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/3.C++输入输出流.html'><span>3.C++输入输出流</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/4.运算符重载.html'><span>4.运算符重载</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/5.set与map简介.html'><span>5.set与map简介</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/6.继承.html'><span>6.继承</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/7.多态.html'><span>7.多态</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/8.vptr与vtable.html'><span>8.vptr与vtable</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/9.模板.html'><span>9.模板</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/10.移动语义与资源管理.html'><span>10.移动语义与资源管理</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/11.哈希.html'><span>11.哈希</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/12.STL-容器.html'><span>12.STL-容器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/13.STL-迭代器.html'><span>13.STL-迭代器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/14.STL-算法.html'><span>14.STL-算法</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/15.STL-适配器.html'><span>15.STL-适配器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/16.STL-函数对象.html'><span>16.STL-函数对象</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/17.STL-空间配置器.html'><span>17.STL-空间配置器</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/18.面向对象设计原则.html'><span>18.面向对象设计原则</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/19.常用设计模式.html'><span>19.常用设计模式</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/20.C++11线程.html'><span>20.C++11线程</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/21.Redis.html'><span>21.Redis</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/22.网络.html'><span>22.网络</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/23.网络编程.html'><span>23.网络编程</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/24.进程间通信.html'><span>24.进程间通信</span></a></p><p><a href='https://charnarie.github.io/Learning-outline/HTML/25.Reactor模型.html'><span>25.Reactor模型</span></a></p><p>&nbsp;</p></div></div>
 
 <script>(function(){function e(e,n,i){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var t=e.target;t&&t!=this;t=t.parentNode)if(t.matches(n)){!1===i.call(t,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)}var t=document.body.parentElement,i=[],r=null,o=document.body.classList.contains("typora-export-collapse-outline");function a(){return t.scrollTop}e("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),u(),!1}),e("click",".outline-item",function(e){var t=this.querySelector(".outline-label");location.hash="#"+t.getAttribute("href"),o&&((t=this.closest(".outline-item-wrapper").classList).contains("outline-item-open")||t.add("outline-item-open"),d(),t.add("outline-item-active"))});function s(){var e=a();r=null;for(var t=0;t<i.length&&i[t][1]-e<60;t++)r=i[t]}function n(){c=setTimeout(function(){var n;i=[],n=a(),document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(e=>{var t=e.getAttribute("id");i.push([t,n+e.getBoundingClientRect().y])}),s(),u()},300)}var l,c,d=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},u=function(){if(r&&(d(),t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(r[0]):r[0])+'"]')))if(o){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var t,n=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");n;)n=(t=n).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")};window.addEventListener("scroll",function(e){l&&clearTimeout(l),l=setTimeout(function(){s(),u()},300)});window.addEventListener("resize",function(e){c&&clearTimeout(c),n()}),n()})();</script></body>
 </html>

@@ -1,0 +1,1916 @@
+<!doctype html>
+<html style='font-size:17px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<!-- 添加字体引用 -->
+<style>
+    @font-face {
+        font-family: 'HYZhengYuan-EEW';
+        src: url('../fonts/HYZhengYuan-EEW.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'JetBrainsMono-Regular';
+        src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
+
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* ---------------->> 引用块 <<---------------- */
+#write blockquote {
+    background: var(--gradient-color);
+    border-bottom-right-radius: 10px;
+    border-left: 5px solid var(--border-color);
+    border-top-right-radius: 10px;
+    box-shadow: var(--box-shadow);
+    color: rgb(from var(--text-color) r g b / 0.85);
+    font-size: .9em;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 10px 10px 20px;
+    transition: var(--bg-transition)
+}
+
+#write blockquote:hover {
+    transition: var(--bg-transition);
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow-large);
+}
+
+#write blockquote p {
+    line-height: 26px
+}
+
+
+/* ---------------->> 警告框样式 <<---------------- */
+/* ---------------->> 提示 <<---------------- */
+.md-alert {
+    --border: solid 1px var(--border-color);
+    background: var(--gradient-color);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: var(--bg-transition);
+}
+
+/* ---------------->> 不同类型的警告框颜色 <<---------------- */
+.md-alert-tip {
+    --border-color: #1f883d;
+}
+
+.md-alert-note {
+    --border-color: #0969da;
+}
+
+.md-alert-important {
+    --border-color: #8250df;
+}
+
+.md-alert-caution {
+    --border-color: #cf222e;
+}
+
+.md-alert-warning {
+    --border-color: #faad14;
+}
+
+/* ---------------->> 边框 <<---------------- */
+.md-alert {
+    border: var(--border);
+    border-left: 5px solid var(--border-color);
+    border-left-color: var(--border-color) !important;
+}
+
+/* ---------------->> 悬浮样式 <<---------------- */
+.md-alert:hover {
+    background: var(--theme-light-color) !important;
+    box-shadow: var(--box-shadow-large);
+}
+
+/* ---------------->> 警告框下段落悬浮样式重置 <<---------------- */
+blockquote p:hover,
+.md-alert p:hover {
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
+/* ---------------->> 警告框内文本颜色 <<---------------- */
+div.md-alert span[md-inline="plain"].md-plain,
+span.md-alert-text-container {
+    color: var(--border-color);
+}
+
+/* ---------------->> 警告框内列表样式 <<---------------- */
+.md-alert li.md-list-item::before,
+.md-alert ul li::before,
+.md-alert ol li::before {
+    background: var(--border-color) !important;
+}
+#write {
+    letter-spacing: 0;
+    text-align: left
+}
+
+/* ---------------->> 大纲参考线 <<---------------- */
+.outline-h1::after,
+.outline-h2::after,
+.outline-h3::after,
+.outline-h4::after,
+.outline-h5::after,
+.outline-h6::after {
+    content: "";
+    height: calc(100% - 25px);
+    width: 1.3px;
+    background: transparent;
+    position: absolute;
+    top: 25px;
+}
+
+li.outline-item-wrapper.outline-h1.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 6.5px;
+}
+
+li.outline-item-wrapper.outline-h2.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 20px;
+}
+
+li.outline-item-wrapper.outline-h3.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 34px;
+}
+
+li.outline-item-wrapper.outline-h4.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 48.5px;
+}
+
+li.outline-item-wrapper.outline-h5.outline-item-open:has(> ul.outline-children > li)::after {
+    background: var(--outline-color);
+    left: 62.5px;
+}
+
+/* ---------------->> 折叠箭头 <<---------------- */
+.outline-expander:before {
+    font-weight: bold;
+}
+
+
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: var(--theme-color);
+}
+
+.theme-preview-div:hover {
+    border-color: var(--main-green);
+}
+
+.theme-preview-div.active>i::before {
+    color: var(--main-green);
+}
+
+#theme-preview-grid {
+    max-width: fit-content;
+}
+
+/* ---------------->> 快速打开搜索框高亮结果 <<---------------- */
+.typora-quick-open-item-title>b {
+    border-radius: var(--radius-small);
+    padding: 2px;
+    color: red;
+    background: yellow;
+}
+
+.typora-quick-open-item.active {
+    background: var(--item-bg-color-blue);
+}
+
+/* ---------------->> 左侧文档列表 <<---------------- */
+.file-list-item.active {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #efefef;
+    background: var(--item-bg-color-blue);
+    color: var(--active-file-text-color);
+}
+
+.file-list-item:hover {
+    color: var(--theme-color);
+    background: #42a5f514;
+}
+
+/* ---------------->> 滚动条 <<---------------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar:hover {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-small);
+    background: rgba(0, 0, 0, .1);
+    width: 10px
+}
+
+/* ---------------->> 一体化-返回按钮 <<---------------- */
+span.megamenu-menu-header-title-back[data-localize=Back]:hover {
+    color: var(--theme-color);
+}
+
+/* ---------------->> 一体化-主题预览卡片 <<---------------- */
+.theme-preview-div {
+    cursor: pointer;
+}
+
+
+/* ---------------->> 快速打开搜索框 <<---------------- */
+#typora-quick-open {
+    border-radius: var(--radius-small);
+}
+
+.typora-quick-open-item:hover {
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    color: var(--theme-color);
+    background: var(--theme-light-color);
+}
+
+/* ---------------->> 一体化模式的侧边菜单 <<---------------- */
+ul#megamenu-menu-list {
+    height: 100%;
+    background: transparent;
+}
+
+/* ---------------->> 一体化模式最近打开文件列表 <<---------------- */
+.megamenu-menu-panel table {
+    font-weight: unset;
+}
+
+/* ---------------->> 一体化模式左侧菜单 <<---------------- */
+.megamenu-menu-header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: #2e2e2e;
+    border-bottom: unset;
+    height: 90px;
+    position: relative;
+    text-align: center
+}
+
+.ion-android-arrow-back:before {
+    content: "<-";
+    font-family: cascadia code, fira code, var(--main-font-family)
+}
+
+a#megamenu-back-btn:hover {
+    color: var(--theme-color)
+}
+
+#megamenu-back-btn {
+    border: 0;
+    font-size: 25px
+}
+
+/* ---------------->> 一体化模式-已保存 <<---------------- */
+a#m-saved:hover {
+    cursor: unset;
+}
+
+a#megamenu-clear-recet-documents:hover {
+    background: transparent;
+}
+
+.megamenu-opened header {
+    background-image: unset;
+}
+
+/* ---------------->> 一体化模式-打开 <<---------------- */
+.megamenu-menu-panel:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+/* ---------------->> 一体化模式-打开-最近打开文件列表 <<---------------- */
+ul.dropdown-menu[aria-labelledby="recent-file-panel-action-btn"] {
+    border-radius: var(--radius-small);
+}
+
+/* ---------------->> 一体化菜单界面背景图片 <<---------------- */
+div#megamenu-section-open {
+    background-color: transparent;
+    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg4.gif');
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    transition: background-image .5s ease-in-out, background-size .5s ease-in-out;
+}
+
+/* ---------------->> 主界面背景图片 <<---------------- */
+content {
+    background-color: transparent;
+    background-image: url('file:///C://Users//29065//AppData//Roaming//Typora/themes/onelight/img/bg.gif');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    transition: background-image .5s ease-in-out, background-size .5s ease-in-out
+}
+
+.context-menu.dropdown-menu>.active>a,
+.context-menu.dropdown-menu>li>a:hover,
+.menu-style-btn.active {
+    cursor: pointer;
+    border-radius: var(--radius-large);
+    background: var(--item-bg-color-blue);
+    color: var(--theme-color)
+}
+
+.menu-item-container a.menu-style-btn.active,
+.menu-item-container a.menu-style-btn:hover {
+    background-color: var(--item-bg-color-blue) !important;
+}
+
+.context-menu {
+    padding-bottom: 0;
+}
+
+.ty-bold:before {
+    font-weight: bold;
+}
+
+/* ---------------->> 右键菜单 <<---------------- */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
+    border-radius: var(--radius-large);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+}
+
+.dropdown-menu .divider {
+    opacity: 0;
+}
+
+/* ---------------->> 任务列表按钮 <<---------------- */
+.ty-check:before {
+    color: #00bb00;
+}
+
+/* ---------------->> 删除按钮 <<---------------- */
+.ty-delete1:before {
+    color: var(--main-red);
+}
+
+/* ---------------->> 代码按钮 <<---------------- */
+.ty-code:before {
+    color: var(--main-purple);
+}
+
+/* ---------------->> 链接按钮 <<---------------- */
+.ty-link-icon:before {
+    color: var(--theme-color);
+}
+
+/* ---------------->> 左侧文件树 <<---------------- */
+.file-library-node.file-tree-node.file-library-file-node.active,
+.file-node-content:hover {
+    color: var(--theme-color)
+}
+
+.file-library-node:not(.file-node-root):focus>.file-node-content {
+    outline: unset;
+}
+
+.file-node-content {
+    cursor: pointer;
+}
+
+.fa-file-text-o:before {
+    content: '📄';
+}
+
+/* ---------------->> 显示/隐藏侧边栏 <<---------------- */
+#outline-btn:hover {
+    color: var(--theme-color)
+}
+
+/* ---------------->> 底部状态栏 <<---------------- */
+#footer-word-count:hover,
+.ty-show-spell-check #footer-spell-check,
+.ty-show-word-count #footer-word-count {
+    background: #eee;
+    color: var(--theme-color);
+}
+
+.footer-item:hover,
+.sidebar-footer-item:hover {
+    color: var(--theme-color);
+}
+
+/* ---------------->> 搜索框 <<---------------- */
+
+#md-searchpanel .btn label {
+    color: var(--theme-color);
+    font-weight: bold;
+}
+
+div#md-searchpanel {
+    background: var(--main-bg);
+}
+
+#md-searchpanel .btn {
+    text-align: center !important;
+    border-radius: 10px;
+    background: rgb(from var(--bg-color) r g b / 0.4);
+    margin: 0 2px;
+}
+
+#md-searchpanel .btn:hover {
+    background: var(--item-bg-color-blue);
+}
+/* ---------------->> 代码框右下角的语言类型显示 <<---------------- */
+pre.md-fences.md-end-block.md-fences-with-lineno.ty-contain-cm::after {
+    content: attr(lang);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #e0e0e0;
+    padding: 2px 5px;
+    border-radius: var(--radius-small);
+    z-index: 20;
+}
+
+
+/* ---------------->> 代码块文本 <<---------------- */
+pre.CodeMirror-line>span {
+    color: var(--light-color);
+}
+
+.md-rawblock-tooltip-name {
+    color: var(--theme-color);
+}
+
+/* ---------------->> meta代码块 <<---------------- */
+#write>pre.md-meta-block.md-end-block {
+    background: var(--theme-light-color) !important;
+    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    transition: var(--transition)
+}
+
+#write>pre.md-meta-block.md-end-block:hover,
+#write>pre.md-meta-block.md-end-block:focus {
+    box-shadow: var(--box-shadow-large);
+}
+
+/* ---------------->> 代码块选中 <<---------------- */
+.CodeMirror-selected,
+.CodeMirror-selectedtext {
+    color: white !important;
+    background: var(--select-text-bg-color) !important;
+}
+
+/* ---------------->> 代码块 <<---------------- */
+#write pre {
+    background: var(--code-bg-color) !important;
+    font-family: var(--main-font-family)
+}
+
+/* ---------------->> 代码语言类型 <<---------------- */
+span.ty-input.ty-input-after.ty-cm-lang-input {
+    color: white;
+}
+
+pre[lang=flow],
+pre[lang=mermaid],
+pre[lang=sequence] {
+    background: var(--theme-light-color);
+    color: #333
+}
+
+/* ---------------->> 代码块 <<---------------- */
+.md-fences,
+code {
+    border-radius: var(--radius-small);
+    margin-left: .2em;
+    margin-right: .2em;
+    padding: .1em
+}
+
+.md-fences {
+    background-color: var(--code-bg-color);
+    box-shadow: 0 4px 10px gray;
+    color: var(--bg-color);
+    margin: 0 0 20px;
+    padding: .4em 1em .3em;
+    transition: var(--transition)
+}
+
+/* ---------------->> 代码块光标 <<---------------- */
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1.5px solid var(--main-green);
+    /* z-index: 5; */
+}
+
+
+
+.cm-s-inner .cm-keyword {
+    color: var(--main-purple)
+}
+
+.cm-s-inner .cm-operator {
+    color: #89ddff
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #eff
+}
+
+.cm-s-inner .cm-type,
+.cm-s-inner .cm-variable-3 {
+    color: #ea6717
+}
+
+.cm-s-inner .cm-builtin {
+    color: #ffcb6b
+}
+
+.cm-s-inner .cm-atom {
+    color: #f78c6c
+}
+
+.cm-s-inner .cm-number {
+    color: #ff5370
+}
+
+.cm-s-inner .cm-def {
+    color: #ff8c00
+}
+
+.cm-s-inner .cm-string {
+    color: #00ad47
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f07178
+}
+
+.cm-s-inner .cm-comment {
+    color: #cdcdcd;
+}
+
+.cm-s-inner .cm-variable {
+    color: #42a5f5
+}
+
+.cm-s-inner .cm-meta {
+    color: var(--main-red)
+}
+
+.cm-s-inner .cm-attribute {
+    color: #e26fff;
+}
+
+.cm-s-inner .cm-property,
+.cm-s-inner .cm-qualifier {
+    color: var(--main-red)
+}
+
+.cm-s-inner .cm-error {
+    border: solid 0.25px #e9405c;
+    color: #fff;
+}
+/* ---------------->> 表格 <<---------------- */
+figure.md-table-fig.table-figure {
+    border: 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius-large);
+}
+
+/* ---------------->> 表格调节组件 <<---------------- */
+.ty-table-edit {
+    border-radius: var(--radius-large);
+    background-color: var(--mica-bg) !important;
+    backdrop-filter: var(--mica-blur);
+    border: var(--mica-border);
+    box-shadow: var(--box-shadow);
+    transition: var(--mica-transition);
+    z-index: 999;
+}
+
+/* 删除表格按钮 */
+.ty-delete:before {
+    color: var(--main-red);
+}
+
+/* ---------------->> 表格行列调整控件 <<---------------- */
+.popover.bottom.md-table-resize-popover {
+    width: fit-content;
+}
+
+#write td.md-reset {
+    border: 0;
+    padding: 0 !important;
+}
+
+.md-grid-board a {
+    border: 0;
+}
+
+tr.md-reset {
+    background: var(--theme-light-color) !important;
+}
+
+td.md-reset.md-grid-ext>a {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------->> 表格行 <<---------------- */
+#write table tr {
+    background-color: var(--theme-light-color);
+    border: 0;
+}
+
+/* ---------------->> 斑马纹 <<---------------- */
+#write table tr:nth-child(2n) {
+    background-color: var(--bg-color);
+}
+
+#write table tr td,
+#write table tr th {
+    border: 0.5px solid var(--tb-border-color);
+    font-size: .9rem;
+    line-height: 1.5;
+    padding: 5px 10px;
+}
+
+/* ---------------->> 表头 <<---------------- */
+#write table tr th {
+    background-color: #42a5f53d;
+    color: var(--theme-color);
+    font-weight: 700
+}
+body,
+script,
+text,
+.md-rawblock-after,
+.md-rawblock-before,
+code,
+pre,
+samp,
+tt {
+    font-family: var(--main-font-family);
+}
+:root {
+    --stroke: var(--theme-color);
+    --fill: var(--text-color);
+}
+
+.md-diagram .md-diagram-panel {
+    background: var(--theme-light-color);
+}
+
+.md-diagram-panel.md-fences-adv-panel {
+    background: var(--theme-light-color);
+    fill: var(--text-color) !important;
+}
+
+pre.md-fences.md-end-block.md-fences-with-lineno.md-diagram.md-fences-advanced.ty-contain-cm {
+    background: transparent !important;
+}
+
+.md-fences-adv-panel,
+.md-math-container,
+.md-mathjax-preview,
+text.actor>tspan,
+text.messageText,
+span.nodeLabel.markdown-node-label {
+    font-family: var(--main-font-family) !important;
+}
+/* ---------------->> 标题 <<---------------- */
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    margin: .72em 0;
+    padding: 0;
+    position: relative;
+    font-weight: lighter;
+}
+
+#write h2:hover:before {
+    bottom: .2rem;
+    content: "H2"
+}
+
+#write h3:hover:before {
+    bottom: .2rem;
+    content: "H3"
+}
+
+#write h4:hover:before {
+    bottom: .2rem;
+    content: "H4"
+}
+
+#write h5:hover:before {
+    bottom: .2rem;
+    content: "H5"
+}
+
+#write h6:hover:before {
+    bottom: .2rem;
+    content: "H6"
+}
+
+#write h2:hover:before,
+#write h3:hover:before,
+#write h4:hover:before,
+#write h5:hover:before,
+#write h6:hover:before {
+    line-height: 25px;
+    padding: 0 1px 0 1px;
+    bottom: 0;
+    color: var(--item-bg-color-blue);
+    font-size: .9rem;
+    position: absolute;
+    right: calc(100% + 3px);
+}
+
+#write h1 {
+    color: var(--theme-color);
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 0.3em;
+}
+
+#write h2 {
+    color: var(--theme-color);
+    font-size: 1.7rem;
+    margin: 1em 0;
+    border-bottom: 2px solid var(--theme-color);
+    padding-bottom: 0.2em;
+}
+
+
+#write h3 {
+    font-size: 1.5rem;
+    color: var(--theme-color);
+    padding-left: 15px;
+    position: relative;
+}
+
+#write h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    z-index: 0;
+}
+
+#write h4 {
+    font-size: 1.2rem;
+    width: fit-content;
+    color: white;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 1px 12.5px;
+    position: relative;
+    background: linear-gradient(to right, var(--theme-color), var(--main-green));
+    border-radius: var(--radius-small);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    transition: background-position 0.1s ease-in-out, color 0.3s ease-in-out;
+}
+
+#write h4:hover {
+    background-position: -100% -100%;
+}
+
+#write h5 {
+    font-size: 1.5rem;
+    width: fit-content;
+    color: var(--main-yellow);
+}
+
+#write h6 {
+    font-size: 1.2rem;
+    width: fit-content;
+    color: var(--main-green);
+}
+/* ---------------->> 列表 <<---------------- */
+#write ol,
+#write ul {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding-left: 40px !important;
+}
+
+#write li section {
+    font-size: .9rem;
+    font-size: .9rem;
+}
+
+#write ol li,
+#write ul li {
+    list-style-type: none;
+    margin-bottom: 7px;
+    margin-top: 7px
+}
+
+/* ---------------->> 无序列表前小圆点 <<---------------- */
+#write .ul>.li:not(.tab):not(.task-list-item):before,
+#write ul>li:not(.tab):not(.task-list-item):before {
+    border-radius: .31em;
+    content: "";
+    height: .62em;
+    line-height: .42em;
+    margin-left: -22px;
+    margin-top: 15px;
+    width: .62em;
+    transition: transform 0.3s;
+}
+
+#write .ul>.li:not(.tab):not(.task-list-item):hover:before,
+#write ul>li:not(.tab):not(.task-list-item):hover:before {
+    transform: rotate(360deg) !important;
+}
+
+
+/* ---------------->> 二级无序列表前小方块 <<---------------- */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item::before {
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+/* ---------------->> 三级无序列表前小方块 <<---------------- */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item::before {
+    border-radius: 0;
+    transform: unset;
+}
+
+/* ---------------->> 四级无序列表前小方块 <<---------------- */
+#write ul>li:not(.tab):not(.task-list-item)>ul>li.md-list-item>ul>li.md-list-item>ul>li.md-list-item::before {
+    border-radius: 0;
+    background: transparent;
+    border: 1.5px solid var(--theme-color);
+}
+
+
+#write .ol .li:before,
+#write .ul .li:before,
+#write ol li:before,
+#write ul li:before {
+    background: var(--theme-color);
+    position: absolute;
+}
+
+#write .ol .li:first-child,
+#write ol li:first-child {
+    counter-reset: li
+}
+
+#write .ol .li:hover:before,
+#write .ul .li:hover:before,
+#write ol li:hover:before,
+#write ul li:hover:before {
+    transform: rotate(1turn)
+}
+
+#write .ul>.li:not(.tab):hover:before,
+#write ul>li:not(.tab):hover:before {
+    background-color: var(--main-red);
+    border-color: transparent;
+}
+
+/* ---------------->> 有序列表前数字 <<---------------- */
+#write .ol>.li:before,
+#write ol>li:before {
+    border-radius: .825em;
+    color: #fff;
+    content: counter(li);
+    counter-increment: li;
+    font-size: .65em;
+    height: 1.65em;
+    line-height: 1.7em;
+    margin-left: -25px;
+    margin-top: 10px;
+    text-align: center;
+    width: 1.65em;
+    transition: transform 0.5s;
+}
+
+#write .ol>.li:hover:before,
+#write ol>li:hover:before {
+    transform: rotate(720deg) !important;
+}
+
+#write .ol .li input,
+#write .ul .li input,
+#write ol li input,
+#write ul li input {
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+/* ---------------->> todo列表-复选框 <<---------------- */
+
+#write input[type=checkbox] {
+    top: 10px;
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-left: -1.8em;
+}
+
+li.md-list-item.task-list-item.md-task-list-item::marker {
+    content: none;
+    font-size: inherit;
+}
+
+/* ---------------->> 删除线 <<---------------- */
+del {
+    color: grey;
+}@import '';
+@import '';
+@import '';
+@import '';
+@import '';
+@import '';
+
+/* 标题 */
+@import '';
+/* @import './onelight/style/title/title-colorful.css'; */
+/* @import './onelight/style/title/title-colorful-dark.css'; */
+
+/* 列表 */
+@import '';
+/* @import './onelight/style/list/list-simple.css'; */
+
+
+/* -------------------------------------------------------- */
+
+:root {
+    --bg-color: #f2f2f2;
+    --code-bg-color: #282c34;
+    --text-color: black;
+    --primary-btn-text-color: #fff;
+    --active-file-bg-color: #eee;
+    --window-border: 1px solid var(--active-file-bg-color);
+    --active-file-text-color: inherit;
+    --active-file-border-color: var(--main-red);
+    --side-bar-bg-color: var(--bg-color);
+    --item-hover-bg-color: hsla(0, 0%, 90%, .59);
+    --item-hover-text-color: var(--main-red);
+    --monospace: monospace;
+    --select-text-font-color: white !important;
+    --select-text-bg-color: #3266D0;
+    --side-bar-menu-active-tint: var(--main-green);
+    --outline-color: #a5a5a5;
+    --tb-border-color: #e8e8e8;
+    /* ---------------->> 主题色 <<---------------- */
+    --theme-color: #166ff3;
+    --main-red: #ff6b6b;
+    --main-green: #2ed573;
+    --main-purple: #c94ae9;
+    --main-yellow: #f9b03d;
+    --light-color: #b2b2b2;
+    --theme-light-color: white;
+    --code--bg-color: #282c34;
+    --code--bg-color-light: #3d404e;
+    --border-color: var(--theme-color);
+    --border: solid 0.5px var(--theme-color)94;
+    /* ---------------->> 字体 <<---------------- */
+    --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
+    /* ---------------->> 悬浮 <<---------------- */
+    --item-bg-color-red: rgb(from var(--main-red) r g b / 0.22);
+    --item-bg-color-blue: rgb(from var(--theme-color) r g b / 0.26);
+    /* ---------------->> 阴影 <<---------------- */
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
+    --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
+    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+    /* ---------------->> 过渡 <<---------------- */
+    --transition: box-shadow 0.3s ease, transform 0.3s ease;
+    --bg-transition: background-color 0.5s ease;
+    /* ---------------->> 左到右透明渐变色 <<---------------- */
+    --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
+    /* ---------------->> 圆角 <<---------------- */
+    --radius-small: 5px;
+    --radius-large: 10px;
+    --radius-xlarge: 15px;
+    /* ---------------->> 云母 <<---------------- */
+    --mica-bg: rgba(255, 255, 255, 0.65);
+    --mica-blur: blur(12px) saturate(1.3);
+    --mica-border: 1px solid rgba(255, 255, 255, 0.15);
+    --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    /* default base dark forest neutral night */
+    --mermaid-theme: default;
+}
+
+
+/* ---------------->> 段落 <<---------------- */
+#write p {
+    padding: 5px;
+    margin: 0;
+    line-height: 26px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+#write p:not(:has(.md-image)) {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+/* 仅在p标签不包含图片时应用悬停效果 */
+#write p:not(:has(.md-image)):hover {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius-large);
+    background: var(--theme-light-color);
+}
+
+#write p:has(.md-image):hover::before {
+    display: none;
+}
+
+#write p[align="center"]:hover {
+    width: inherit;
+}
+
+/* ---------------->> 粗体 <<---------------- */
+#write strong {
+    color: var(--theme-color);
+    font-weight: 700
+}
+
+/* ---------------->> 链接 <<---------------- */
+a>span.md-plain,
+a.md-url,
+a {
+    margin-left: 1px;
+    margin-right: 1px;
+    color: var(--main-purple);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.md-alert a>span.md-plain,
+.md-alert a.md-url,
+.md-alert a {
+    color: var(--main-purple) !important;
+}
+
+/* 目录中取消链接箭头 */
+#write a.md-toc-inner::after {
+    background: unset;
+}
+
+/* 表格组件取消链接箭头 */
+.md-reset>a::after {
+    content: none !important;
+}
+
+/* 图片链接取消链接箭头 */
+a:has(img)::after {
+    display: none !important;
+}
+
+/* 取消四级标题的链接效果 */
+h4.md-end-block.md-heading a,
+h4.md-end-block.md-heading a>span {
+    color: white;
+    text-decoration: none;
+}
+
+/* 去除6级标题链接下划线 */
+h6.md-end-block.md-heading a,
+h6.md-end-block.md-heading a>span {
+    text-decoration: none;
+}
+
+/* 取消 h4 标题中链接的箭头效果 */
+#write h4.md-end-block.md-heading a::after {
+    content: none;
+    display: none;
+}
+
+/* 链接箭头 */
+#write a::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.1em;
+    height: 1.1em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c94ae9'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E");
+}
+
+/* ---------------->> 目录项 <<---------------- */
+a.md-toc-inner {
+    color: var(--main-purple);
+}
+
+#write p.md-toc-content:hover {
+    width: inherit;
+}
+
+#write code {
+    background-color: var(--item-hover-bg-color);
+    color: #eb4c37;
+    font-family: var(--main-font-family);
+    font-size: .9rem;
+    font-size: .9rem;
+}
+
+#write li code,
+#write p code,
+#write span code {
+    border-radius: var(--radius-small);
+    margin: 0 2px;
+    padding: 2px 4px;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+/* ---------------->> 图片 <<---------------- */
+#write img {
+    border-left: 0;
+    border-right: 0;
+    filter: var(--drop-shadow);
+    border-radius: var(--radius-small);
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    transition: var(--transition);
+    width: auto;
+}
+
+#write img:hover {
+    box-shadow: var(--box-shadow-large);
+}
+
+/* ---------------->> 脚注 <<---------------- */
+.md-def-name {
+    padding-right: 3ch;
+}
+
+.md-footnote {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+/* ---------------->> 高亮 <<---------------- */
+mark {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: var(--radius-large);
+    padding: 2px 5px 2px 5px;
+    border: 1.5px solid;
+    background: transparent;
+    color: var(--main-red);
+}
+
+
+.searchpanel-search-option-btn.active {
+    animation: colorChange 1s infinite;
+    color: var(--theme-color)
+}
+
+span#filesearch-case-option-btn:active {
+    color: var(--theme-color)
+}
+
+.md-inline-math-container mjx-container {
+    zoom: 1
+}
+
+.md-expand.md-img-loaded>.md-meta>span,
+.md-image>.md-meta {
+    color: var(--theme-color);
+    font-family: var(--main-font-family)
+}
+
+.outline-item-active {
+    background: var(--item-bg-color-blue);
+    border-left: 28px solid transparent;
+    margin-left: -28px;
+    margin-right: -28px
+}
+
+.pin-outline #outline-content .outline-active strong,
+.pin-outline .outline-active {
+    color: var(--theme-color);
+    font-weight: 700
+}
+
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border {
+    background-color: var(--theme-color)
+}
+
+/* ---------------->> 脚注 <<---------------- */
+#write .md-footnote {
+    margin-right: 2px;
+    margin-left: 2px;
+    line-height: 1;
+    background: var(--theme-light-color);
+    color: var(--main-red);
+    font-weight: 700;
+}
+
+.md-fences:not(.md-focus) .CodeMirror-code>:hover {
+    background-color: var(--code--bg-color-light)
+}
+
+hr {
+    background-color: transparent;
+    border-top: 2px dashed var(--theme-color);
+    height: 2px
+}
+
+
+/* ---------------->> 键盘快捷键 <<---------------- */
+kbd {
+    font-family: var(--main-font-family);
+    font-weight: 700
+}
+
+/* ---------------->> 目录 <<---------------- */
+p.md-toc-content {
+    padding-left: 10px !important;
+    margin-left: 20px !important;
+    background: var(--gradient-color);
+    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow);
+}
+
+p.md-toc-content:hover {
+    transition: var(--bg-transition);
+    background: var(--theme-light-color);
+}
+
+
+.info-panel-tab-title:hover,
+.outline-label:hover {
+    color: var(--theme-color)
+}
+
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+    background-color: var(--theme-color)
+}
+
+.md-notification-content {
+    background: #ff00001a
+}
+
+.md-task-list-item.task-list-done span {
+    color: #999;
+    text-decoration: line-through
+}
+
+
+.fa-folder:before,
+.md-image-btn:before {
+    color: var(--main-yellow);
+}
+
+.md-image-btn:before {
+    font-family: var(--main-font-family)
+}
+
+.md-image-btn,
+.modal-content {
+    background: var(--theme-light-color)
+}
+
+.modal-content,
+video {
+    border-radius: var(--radius-large);
+}
+
+video {
+    box-shadow: var(--box-shadow-large);
+}
+
+/* ---------------->> 脚注编辑视图 <<---------------- */
+.md-blockmeta {
+    font-style: normal;
+    color: gray;
+}
+
+.ty-on-outline-filter .ty-outline-hit {
+    background: #ff0;
+    color: red;
+    font-weight: 700
+}
+
+#file-library-search-input,
+#md-searchpanel input {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgb(from var(--bg-color) r g b / 0.7);
+    border-radius: var(--radius-small);
+    box-shadow: unset
+}
+
+#file-library-search-input:focus,
+#md-searchpanel input:focus {
+    border-color: var(--theme-color);
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+    color: var(--theme-color)
+}
+
+.form-control:focus {
+    border-color: #c2c2c2;
+    outline: 0
+}
+
+.code-tooltip .ty-input:focus,
+input:focus {
+    border-color: unset;
+    box-shadow: unset
+}
+
+/* ---------------->> 脚注链接 <<---------------- */
+.code-tooltip-content a {
+    color: rgb(145 205 255);
+}
+
+.megamenu-menu-list li a.active,
+.megamenu-menu-list:not(.saved) li a:hover {
+    background-color: var(--item-hover-bg-color);
+    color: var(--theme-color)
+}
+
+.megamenu-menu {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: var(--bg-color);
+    color: #000
+}
+
+.typora-node.pin-outline #md-searchpanel,
+.typora-node.pin-outline .md-notification-container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgb(from var(--bg-color) r g b / 0.7);
+}
+
+
+
+.menu-item-container a.menu-style-btn {
+    background: transparent
+}
+
+.ty-menu-shortcut {
+    font-family: var(--main-font-family);
+}
+
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header {
+    color: var(--theme-color)
+}
+
+.outline-item:hover {
+    background: var(--item-bg-color-red);
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    margin-left: -28px;
+    margin-right: -28px
+}
+
+.file-library-node.file-tree-node.file-library-file-node:hover {
+    background: var(--item-bg-color-blue)
+}
+
+
+/* ---------------->> 高亮标签 <<---------------- */
+span[alt=highlight] {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: var(--radius-large);
+    padding: 5px;
+    background: #ff0;
+    color: red;
+    box-shadow: var(--box-shadow);
+}
+
+/* ---------------->> 搜索高亮 <<---------------- */
+.cm-search-hit.CodeMirror-selectedtext,
+.md-search-hit.md-search-select,
+.md-search-select {
+    padding: 2px 5px 2px 5px;
+    border-radius: var(--radius-large);
+    background: #ff0 !important;
+    color: red !important;
+    box-shadow: var(--box-shadow);
+}
+
+.md-search-hit {
+    background: #ff0;
+    box-shadow: var(--box-shadow);
+}
+
+.cm-search-hit {
+    background: unset;
+    color: unset;
+}
+
+
+.CodeMirror-gutters {
+    border-right: unset
+}
+
+
+footer.ty-footer {
+    border-top: 0
+}
+
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: 0
+}
+
+#typora-source .CodeMirror-lines {
+    background: var(--theme-light-color);
+    border-radius: var(--radius-large);
+    max-width: 90%
+}
+
+#typora-source .CodeMirror-lines,
+.CodeMirror-wrap .CodeMirror-code pre {
+    font-family: var(--main-font-family)
+}
+
+.cm-s-typora-default .cm-code,
+.cm-s-typora-default .cm-comment {
+    color: green;
+    font-family: var(--main-font-family)
+}
+
+.cm-s-inner .cm-tag {
+    color: var(--main-purple);
+}
+
+.cm-s-typora-default .cm-overlay {
+    font-family: var(--main-font-family)
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: hsla(0, 0%, 60%, .2);
+    left: -60px;
+    right: -30px
+}
+
+.cm-s-typora-default .cm-atom,
+.cm-s-typora-default .cm-number {
+    color: var(--theme-color)
+}
+
+#typora-source .CodeMirror-activeline .CodeMirror-linenumber,
+#typora-source .CodeMirror-linenumber.CodeMirror-linenumber-show {
+    color: var(--theme-color);
+    font-family: var(--main-font-family)
+}
+
+.md-html-inline .md-meta,
+.md-ruby .md-meta {
+    font-family: var(--main-font-family)
+}
+
+
+.cm-s-typora-default .cm-tag {
+    color: #ff7800
+}
+
+.cm-s-typora-default .cm-link {
+    color: var(--main-purple);
+    font-style: italic;
+    text-decoration: underline
+}
+
+/* 修复emoji在标题中的显示问题 */
+span[alt="plain"]>span.md-plain {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: initial;
+}
+
+:root {
+    /* ---------------->> 字体 <<---------------- */
+    --main-font-family: "JetBrainsMono-Regular", "HYZhengYuan-EEW", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* ---------------->> 主界面背景图片 <<---------------- */
+/* content { 
+    background-color: transparent !important; 
+    background-image: url('../img/Nijika.gif') !important; 
+    background-position: 100% 100% !important; 
+    background-repeat: no-repeat !important; 
+    background-size: 200px auto !important; 
+    transition: background-image .5s ease-in-out, background-size .5s ease-in-out !important; 
+}  */
+
+/* ---------------->> 导出时保留背景图片 <<---------------- */
+@media print {
+    body {
+        background-image: url('../img/Nijika.gif') !important;
+        background-position: 100% 100% !important;
+        background-repeat: no-repeat !important;
+        background-size: 200px auto !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    #write {
+        background-image: url('../img/Nijika.gif') !important;
+        background-position: 100% 100% !important;
+        background-repeat: no-repeat !important;
+        background-size: 200px auto !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
+
+/* 确保PDF导出时也能显示背景图 */
+/* @page {
+    margin: 1cm;
+    size: auto;
+    background-image: url('../img/Nijika.gif') !important;
+    background-position: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: 200px auto !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+} */
+
+/* 确保HTML导出时也能显示背景图 */
+.typora-export {
+    background-image: url('../img/Nijika.gif') !important;
+    background-position: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: 200px auto !important;
+}
+
+/* 确保HTML导出时也能显示一体化菜单背景图 */
+.typora-export div#megamenu-section-open {
+    background-image: url('../img/Nijika.gif') !important;
+}
+
+/* ---------------->> 一体化菜单界面背景图片 <<---------------- */
+/* div#megamenu-section-open {
+    background-color: transparent !important;
+    background-image: url('../img/Nijika.gif') !important;
+    background-position: 100% 0% !important;
+    background-repeat: no-repeat !important;
+    background-size: 100px auto !important;
+    transition: background-image .5s ease-in-out, background-size .5s ease-in-out !important;
+} */
+</style><title>18.面向对象设计原则</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#面向对象的基本概念">面向对象的基本概念</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#面向过程">面向过程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#面向对象">面向对象</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#面向对象的四大特征">面向对象的四大特征</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#封装">封装</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#继承">继承</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#多态">多态</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#抽象">抽象</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#总结">总结</a></div><ul class="outline-children"></ul></li></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#类与类之间的五种关系">类与类之间的五种关系</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#继承-2">继承</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#组合">组合</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#聚合">聚合</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#关联">关联</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#依赖">依赖</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#总结-2">总结</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#面向对象的设计原则">面向对象的设计原则</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#单一职责原则">单一职责原则</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#开闭原则">开闭原则</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#里氏替换原则">里氏替换原则</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#接口隔离原则">接口隔离原则</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#依赖倒置原则">依赖倒置原则</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#迪米特法则-最少知识原则">迪米特法则/ 最少知识原则</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#组合复用原则">组合复用原则</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='面向对象的基本概念'><span>面向对象的基本概念</span></h1><h2 id='面向过程'><span>面向过程</span></h2><p><span>面向过程（Procedural Programming）是一种以过程（函数）为中心的编程思想，强调将问题分解为一系列步骤（过程/函数），通过函数调用和数据传递来实现程序功能。</span></p><p><strong><span>主要特征</span></strong></p><ul><li><p><strong><span>以函数为基本单位</span></strong><span>：程序由多个函数组成，每个函数完成特定任务。</span></p></li><li><p><strong><span>数据与操作分离</span></strong><span>：数据结构和操作数据的函数是分开的。</span></p></li><li><p><strong><span>自顶向下设计</span></strong><span>：先整体后局部，逐步细化。</span></p></li><li><p><strong><span>强调算法和流程</span></strong><span>：关注如何一步步完成任务。</span></p></li></ul><h2 id='面向对象'><span>面向对象</span></h2><p><span>面向对象（Object-Oriented Programming, OOP）是一种以对象为中心的编程思想，将数据和操作数据的方法封装在对象中，通过对象之间的交互来实现程序功能。</span></p><h3 id='面向对象的四大特征'><span>面向对象的四大特征</span></h3><p><span>面向对象编程（OOP）有四大核心特征：</span><strong><span>封装、继承、多态、抽象</span></strong><span>。</span></p><h4 id='封装'><span>封装</span></h4><p><span>封装（Encapsulation）是将数据（属性）和操作数据的方法（函数）绑定在一起，并隐藏对象的内部实现细节，只对外提供必要的接口。</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>数据隐藏</span></strong><span>：通过访问控制符（private、protected、public）控制成员的可见性</span></p></li><li><p><strong><span>接口统一</span></strong><span>：对外提供统一的访问接口</span></p></li><li><p><strong><span>降低耦合</span></strong><span>：减少模块间的依赖关系</span></p></li></ul><h4 id='继承'><span>继承</span></h4><p><span>继承（Inheritance）允许一个类（子类/派生类）获得另一个类（父类/基类）的属性和方法，实现代码复用和层次化设计。</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>代码复用</span></strong><span>：子类自动拥有父类的成员</span></p></li><li><p><strong><span>层次结构</span></strong><span>：建立类之间的层次关系</span></p></li><li><p><strong><span>扩展性</span></strong><span>：子类可以添加新的属性和方法</span></p></li><li><p><strong><span>重写机制</span></strong><span>：子类可以重写父类的方法</span></p></li></ul><h4 id='多态'><span>多态</span></h4><p><span>多态（Polymorphism）是指同一个操作作用于不同的对象时，可以有不同的解释和执行结果。主要通过虚函数和函数重载实现。</span></p><ul><li><p><strong><span>编译时多态</span></strong><span>：函数重载、运算符重载</span></p></li><li><p><strong><span>运行时多态</span></strong><span>：虚函数、动态绑定</span></p></li></ul><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>接口统一</span></strong><span>：相同的接口，不同的实现</span></p></li><li><p><strong><span>动态绑定</span></strong><span>：运行时确定调用哪个函数</span></p></li><li><p><strong><span>扩展性强</span></strong><span>：易于添加新的类型</span></p></li></ul><h4 id='抽象'><span>抽象</span></h4><p><span>抽象（Abstraction）是指从具体事物中提取共同特征，忽略非本质的细节，形成概念的过程。在编程中通过抽象类和接口实现。</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>关注本质</span></strong><span>：突出重要特征，隐藏实现细节</span></p></li><li><p><strong><span>简化复杂性</span></strong><span>：将复杂问题分解为简单概念</span></p></li><li><p><strong><span>提供框架</span></strong><span>：定义标准接口和规范</span></p></li></ul><p><strong><span>实现方式</span></strong></p><ul><li><p><strong><span>抽象类</span></strong><span>：包含纯虚函数的类</span></p></li><li><p><strong><span>接口</span></strong><span>：只包含纯虚函数的类</span></p></li></ul><h3 id='总结'><span>总结</span></h3><p><span>面向对象的四大特征相互配合，共同构成了面向对象编程的理论基础：</span></p><ol start='' ><li><p><strong><span>封装</span></strong><span>保证了数据的安全性和模块的独立性</span></p></li><li><p><strong><span>继承</span></strong><span>实现了代码的复用和层次化设计</span></p></li><li><p><strong><span>多态</span></strong><span>提供了灵活的接口和强大的扩展能力</span></p></li><li><p><strong><span>抽象</span></strong><span>简化了复杂问题，提供了标准化的设计框架</span></p></li></ol><p><span>这四个特征使得面向对象编程具有高内聚、低耦合、易维护、易扩展的优点。           </span></p><h1 id='类与类之间的五种关系'><span>类与类之间的五种关系</span></h1><p><span>在面向对象编程中，类与类之间存在多种关系，这些关系定义了类之间的交互方式和依赖程度。以下是五种主要的类关系：</span></p><h2 id='继承-2'><span>继承</span></h2><p><span>继承（Inheritance/Is-a）是面向对象编程的核心概念之一，表示&quot;是一个&quot;的关系。子类继承父类的属性和方法，并可以扩展或重写父类的功能。</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>强耦合关系</span></strong><span>：子类与父类紧密相关</span></p></li><li><p><strong><span>代码复用</span></strong><span>：子类自动获得父类的所有公有和保护成员</span></p></li><li><p><strong><span>多态性</span></strong><span>：支持运行时多态</span></p></li><li><p><strong><span>单向依赖</span></strong><span>：子类依赖父类，但父类不依赖子类</span></p></li></ul><h2 id='组合'><span>组合</span></h2><p><span>组合（Composition/Has-a）表示&quot;拥有&quot;的关系，是一种强拥有关系。组合中的部分对象不能独立于整体对象存在，整体对象负责部分对象的生命周期管理。</span></p><p><span>组合是一种最强的关联关系，表现为</span><strong><span>整体与局部</span></strong><span>的关系，</span><strong><span>整体部分会负责局部的销毁</span></strong><span>。</span></p><p><span>在代码层面上：</span><strong><span>使用的是成员子对象</span></strong><span>。</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>强拥有关系</span></strong><span>：部分对象的生命周期完全依赖于整体对象</span></p></li><li><p><strong><span>不可分离</span></strong><span>：部分对象不能独立存在</span></p></li><li><p><strong><span>级联删除</span></strong><span>：整体对象销毁时，部分对象也被销毁</span></p></li><li><p><strong><span>封装性强</span></strong><span>：部分对象通常是私有的</span></p></li></ul><h2 id='聚合'><span>聚合</span></h2><p><span>聚合（Aggregation/Has-a）表示&quot;拥有&quot;的关系，但是一种弱拥有关系。聚合中的部分对象可以独立于整体对象存在，整体对象不负责部分对象的创建和销毁。</span></p><p><span>聚合是一种稍微强一点的关联关系，表现为</span><font color=red><strong><span>整体与局部</span></strong></font><span>的关系，整体并不负责局部对象的销毁。</span></p><p><span>在代码层面上：</span><strong><span>使用指针或引用</span></strong><span>。</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>弱拥有关系</span></strong><span>：部分对象可以独立存在</span></p></li><li><p><strong><span>可分离</span></strong><span>：部分对象可以脱离整体对象</span></p></li><li><p><strong><span>共享所有权</span></strong><span>：多个整体对象可以共享同一个部分对象</span></p></li><li><p><strong><span>生命周期独立</span></strong><span>：整体对象销毁不影响部分对象</span></p></li></ul><h2 id='关联'><span>关联</span></h2><p><span>关联（Association/Has-a）表示类之间的&quot;使用&quot;关系，是一种相对松散的关系。关联的对象在逻辑上相关，但生命周期独立，可以相互引用。</span></p><p><span>关联关系，是两个类之间最简单、最单纯的关系（仅仅表明两个类之间是有关系的）。</span></p><p><span>如果两个类之间没有关系，那就不能满足面向对象的特点（</span><strong><span>对象与对象之间进行交互，使得彼此之间的状态发生变化</span></strong><span>）。</span></p><p><span>而关联关系包括两种：</span><strong><span>双向</span></strong><span>的关联关系与</span><strong><span>单向</span></strong><span>的关联关系。</span></p><p><span>但是不论哪种关联关系，两个类之间彼此并不负责对方的生命周期。注意在语义上是A has B的关系，一种固定的关系。</span></p><p><span>在代码上的表现形式是：</span><font color=red><strong><span>使用引用或者指针</span></strong></font><span>。两种关联关系的例子：</span></p><p><strong><span>双向的关联关系</span></strong></p><p><span>双向的关联关系（使用直线），比如客户与订单之间的关系。客户拥有一个或多个订单，每个订单都会属于一个客户。</span></p><p><strong><span>彼此知道对方的存在，但是彼此并不负责对方的生命周期。</span></strong></p><p><span>在代码层面上：使用的是指针或者引用。</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>松散耦合</span></strong><span>：对象之间相对独立</span></p></li><li><p><strong><span>双向或单向</span></strong><span>：可以是双向关联或单向关联</span></p></li><li><p><strong><span>多重性</span></strong><span>：一对一、一对多、多对多关系</span></p></li><li><p><strong><span>生命周期独立</span></strong><span>：对象可以独立创建和销毁</span></p></li></ul><h2 id='依赖'><span>依赖</span></h2><p><span>依赖（Dependency/Uses）是最弱的关系，表示一个类</span><strong><span>使用</span></strong><span>另一个类，但不拥有它。依赖通常体现在方法参数、局部变量、静态方法调用等场景中。</span></p><p><span>依赖是两个类之间的一种</span><strong><span>不确定的关系</span></strong><span>，语义上是一种A use B的关系，这种关系是</span><strong><span>偶然的，临时的，并非固定的</span></strong><span>  。</span></p><p><span>代码表现形式：</span></p><ul><li><p><span>B作为A的成员函数参数；（或者B类引用、B类指针作为A的成员函数参数）</span></p></li><li><p><span>B作为A的成员函数的局部变量；</span></p></li><li><p><span>B作为A的成员函数的返回值；</span></p></li><li><p><span>A的成员函数调用B的静态方法。</span></p></li></ul><p><span>（总之，只与A的成员函数相关，与A的数据成员无关）</span></p><p><strong><span>特点</span></strong></p><ul><li><p><strong><span>最弱耦合</span></strong><span>：临时性的使用关系</span></p></li><li><p><strong><span>不持有引用</span></strong><span>：不保存对方的引用或指针</span></p></li><li><p><strong><span>临时交互</span></strong><span>：通常在方法调用期间发生</span></p></li><li><p><strong><span>易于解耦</span></strong><span>：容易修改和替换</span></p></li></ul><h2 id='总结-2'><span>总结</span></h2><figure class='table-figure'><table><thead><tr><th><span>关系类型</span></th><th><span>耦合强度</span></th><th><span>生命周期依赖</span></th><th><span>典型表现</span></th><th><span>UML表示</span></th><th><span>代码特征</span></th></tr></thead><tbody><tr><td><strong><span>继承</span></strong></td><td><span>最强</span></td><td><span>子类依赖父类</span></td><td><span>&quot;is&quot;</span></td><td><span>空心三角箭头</span></td><td><code>class Child : public Parent</code></td></tr><tr><td><strong><span>组合</span></strong></td><td><span>强</span></td><td><span>部分依赖整体</span></td><td><span>&quot;has&quot;</span></td><td><span>实心菱形</span></td><td><span>成员对象，构造时创建</span></td></tr><tr><td><strong><span>聚合</span></strong></td><td><span>中等</span></td><td><span>相对独立</span></td><td><span>&quot;has&quot;</span></td><td><span>空心菱形</span></td><td><span>成员指针，外部创建</span></td></tr><tr><td><strong><span>关联</span></strong></td><td><span>较弱</span></td><td><span>独立</span></td><td><span>&quot;has&quot;</span></td><td><span>直线箭头</span></td><td><span>成员指针，可双向</span></td></tr><tr><td><strong><span>依赖</span></strong></td><td><span>最弱</span></td><td><span>独立</span></td><td><span>&quot;use&quot;</span></td><td><span>虚线箭头</span></td><td><span>参数、局部变量、静态调用</span></td></tr></tbody></table></figure><h1 id='面向对象的设计原则'><span>面向对象的设计原则</span></h1><p><span>在进行面向对象设计的时候，需要考虑类与类之间的关系，这样可以让类之间的关系更加明确。但是，除此之外，在进行面向对象设计的时候，还需要注意满足一定的设计要求，也就是面向对象的设计原则，只有遵循一定的原则，才能更好的满足软件的设计需求，更好的满足变化。</span></p><p><span>一个优良的系统设计要求：</span><strong><span>低耦合与高内聚</span></strong><span>。</span></p><p><strong><span>耦合</span></strong><span>：强调的是类与类之间、或者模块与模块之间的关系。</span></p><p><strong><span>内聚</span></strong><span>：强调的是类内部、或者模块内部的关系。</span></p><p><span>简单来说就是类之间的关联性降低一些，类内部关联性提高一些（比如一个类只干一件事情）。</span></p><p><span>可以这样理解，如果一个函数的功能太多，那么出现问题的时候一定不方便排查，对于类而言也是同样的道理。</span></p><h2 id='单一职责原则'><span>单一职责原则</span></h2><p><span>单一职责原则 (Single Responsibility Principle, SRP):</span><strong><span>一个类应该只有一个引起它变化的原因，即一个类只应该承担一种职责。</span></strong></p><p><span>一个对象应该只包含单一的职责，并且该职责被完整地封装在一个类中。单一职责原则是最简单的面向对象设计原则，它用于控制类的粒度大小。</span></p><p><span>核心是：</span><strong><span>解耦</span></strong><span>与</span><strong><span>增加内聚性</span></strong><span>。</span></p><p><span>在软件系统中，一个类（大到模块，小到方法）承担的职责越多，它被复用的可能性就越小，而且一个类承担的职责过多，相当于将这些职责耦合在一起，当其中一个职责变化时可能会影响其他职责的运作，因此要将这些职责进行分离，将不同的职责封装在不同的类中，即将不同的变化原因封装在不同的类中，如果多个职责总是同时发生改变则可将它们封装在同一类中。</span></p><p><span>单一职责原则是实现高内聚、低耦合的指导方针，它是最简单但又最难运用的原则，需要设计人员发现类的不同职责并将其分离，而发现类的多重职责需要设计人员具有较强的分析设计能力和相关实践经验。</span></p><p><strong><span>要点</span></strong></p><ul><li><p><span>每个类只负责一个功能领域中的相应职责</span></p></li><li><p><span>类的职责要单一，不能将太多的职责放在一个类中</span></p></li><li><p><span>当需要修改某个职责时，不会影响其他职责</span></p></li></ul><p><strong><span>作用</span></strong></p><ul><li><p><span>降低类的复杂度</span></p></li><li><p><span>提高类的可读性和可维护性</span></p></li><li><p><span>降低变更引起的风险</span></p></li><li><p><span>提高代码的可重用性</span></p></li></ul><h2 id='开闭原则'><span>开闭原则</span></h2><p><span>开闭原则 (Open-Closed Principle, OCP):</span><strong><span>软件实体（类、模块、函数等）应该对扩展开放，对修改关闭。</span></strong></p><p><span>开闭原则是面向对象的可复用性设计的第一块基石，它是</span><strong><span>最重要</span></strong><span>的面向对象设计原则。</span></p><p><strong><span>核心思想：对抽象编程，而不对具体编程，因为抽象相对稳定。</span></strong></p><p><span>在开闭原则的定义中，软件实体可以指一个软件模块、一个由多个类组成的局部结构或一个独立的类。</span></p><p><strong><span>开闭原则就是指软件实体应尽量在不修改原有代码的情况下进行扩展。</span></strong><span>任何软件都需要面临一个很重要的问题，即它们的需求会随时间的推移而发生变化。当软件系统需要面对新的需求时，应该尽量保证系统的设计框架是稳定的。如果一个软件设计符合开闭原则，那么可以非常方便地对系统进行扩展，而且在扩展时无须修改现有代码，使得软件系统在拥有适应性和灵活性的同时具备较好的稳定性和延续性。随着软件规模越来越大，软件寿命越来越长，软件维护成本越来越高，设计满足开闭原则的软件系统也变得越来越重要。</span></p><p><span>为了满足开闭原则，需要对系统进行抽象化设计，</span><font color=red><strong><span>抽象化是开闭原则的关键</span></strong></font><span>。在C++中，可以为系统定义一个相对稳定的抽象层，而将不同的实现行为移至具体的实现层中完成。在C++语言中提供了抽象类的机制，可以通过它定义系统的抽象层，再通过具体类来进行扩展。如果需要修改系统的行为，无须对抽象层进行任何改动，只需要增加新的具体类来实现新的业务功能即可，实现在不修改已有代码的基础上扩展系统的功能，达到开闭原则的要求。</span></p><p><strong><span>要点</span></strong></p><ul><li><p><span>当应用的需求改变时，在不修改软件实体的源代码的前提下，扩展模块的功能</span></p></li><li><p><span>通过抽象化来实现开闭原则</span></p></li><li><p><span>使用继承、多态、组合等方式来扩展功能</span></p></li></ul><p><strong><span>作用</span></strong></p><ul><li><p><span>提高代码的可扩展性</span></p></li><li><p><span>降低维护成本</span></p></li><li><p><span>提高代码的稳定性</span></p></li></ul><h2 id='里氏替换原则'><span>里氏替换原则</span></h2><p><span>里氏替换原则 (Liskov Substitution Principle, LSP):</span><strong><span>所有引用基类的地方必须能透明地使用其子类的对象，即子类必须能够替换其基类。</span></strong></p><p><span>里氏代换原则表明：</span></p><p><span>如果一个软件实体使用的是一个基类对象，那么把它替换成派生类对象，程序将不会产生任何错误和异常；（反过来则不成立）</span></p><p><span>如果一个软件实体使用的是一个派生类对象，那么它不一定能够替换成基类对象直接使用。</span></p><p><strong><span>核心思想：派生类必须能够替换其基类。</span></strong><span>派生类可以扩展基类的功能，但不能改变基类原有的功能。</span></p><p><span>表现为：派生类可以实现基类的抽象方法（纯虚函数），也可以覆盖基类的普通虚函数——表现多态，但不能隐藏基类的普通成员函数。</span></p><p><strong><span>要点</span></strong></p><ul><li><p><span>子类可以扩展父类的功能，但不能改变父类原有的功能</span></p></li><li><p><span>子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法</span></p></li><li><p><span>子类中可以增加自己特有的方法</span></p></li><li><p><span>当子类的方法重载父类的方法时，方法的前置条件（即方法的形参）要比父类方法的输入参数更宽松</span></p></li></ul><p><strong><span>作用</span></strong></p><ul><li><p><span>增强程序的健壮性</span></p></li><li><p><span>提高代码的可维护性</span></p></li><li><p><span>保证继承关系的正确性</span></p></li></ul><h2 id='接口隔离原则'><span>接口隔离原则</span></h2><p><span>接口隔离原则 (Interface Segregation Principle, ISP)：</span><strong><span>客户端不应该依赖它不需要的接口，即一个类对另一个类的依赖应该建立在最小的接口上。</span></strong></p><p><strong><span>核心思想：使用多个小的专门的接口，而不要使用一个大的总接口。</span></strong>
+<span>根据接口隔离原则，当一个接口太大时需要将它分割成一些更细小的接口，使用该接口的客户端仅需知道与之相关的方法即可。每一个接口应该承担一种相对独立的角色，不干不该干的事，该干的事都要干。</span></p><p><strong><span>要点</span></strong></p><ul><li><p><span>使用多个专门的接口，而不使用单一的总接口</span></p></li><li><p><span>接口应该小而专一</span></p></li><li><p><span>避免接口污染</span></p></li><li><p><span>提高系统的灵活性和可维护性</span></p></li></ul><p><strong><span>作用</span></strong></p><ul><li><p><span>降低类之间的耦合度</span></p></li><li><p><span>提高代码的可维护性</span></p></li></ul><h2 id='依赖倒置原则'><span>依赖倒置原则</span></h2><p><span>依赖倒置原则 (Dependency Inversion Principle, DIP)：</span><strong><span>高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。</span></strong></p><p><span>简单来说，依赖倒置原则要求针对接口编程，不要针对实现编程。</span></p><p><span>如果说开闭原则是面向对象设计的目标，那么依赖倒置原则就是面向对象设计的主要实现机制之一。</span></p><p><strong><span>依赖倒置原则要求在程序代码中传递参数时或在关联关系中尽量引用层次高的抽象层类。</span></strong><span>（基类往派生类方向代表从上往下，从高到低）</span></p><p><span>也就是</span><strong><span>使用抽象类进行变量类型声明、参数类型声明、方法返回类型声明</span></strong><span>，以及数据类型的转换等，而不要用具体的派生类来做这些事情。</span></p><p><strong><span>要点</span></strong></p><ul><li><p><span>面向接口编程，而不是面向实现编程</span></p></li><li><p><span>通过抽象使各个类或模块不相互影响</span></p></li><li><p><span>降低类之间的耦合性</span></p></li><li><p><span>提高系统的稳定性</span></p></li></ul><p><strong><span>作用</span></strong></p><ul><li><p><span>提高代码的可维护性和可扩展性</span></p></li><li><p><span>便于单元测试</span></p></li></ul><h2 id='迪米特法则-最少知识原则'><span>迪米特法则/ 最少知识原则</span></h2><p><span>迪米特法则 (Law of Demeter, LoD) / 最少知识原则：</span><strong><span>一个对象应该对其他对象保持最少的了解，即一个类应该对自己依赖的类知道得最少。</span></strong></p><p><span>迪米特法则要求每一个软件单位对其他单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。</span></p><p><span>一个软件实体应当尽可能少地与其他实体发生相互作用。如果一个系统符合迪米特法则，那么当其中的某一个模块发生修改时就会尽量少地影响其他模块，扩展会相对容易。</span></p><p><span>应用迪米特法则可降低系统的耦合度，使类与类之间保持松散的耦合关系。当两个类之间直接通信的时候，会造成高度依赖的后果（高耦合）。解决此问题的办法，尽量避免两个类直接接触（低耦合），通过一个第三者做转发。</span></p><blockquote><p><span>在迪米特法则中，对于一个对象，其朋友包括以下几种：</span>
+<span>（1）当前对象本身（this）</span>
+<span>（2）以参数形式传入到当前对象方法中的对象</span>
+<span>（3）当前对象的成员子对象</span>
+<span>（4）如果当前对象的成员对象是一个集合，那么集合中的元素也都是朋友</span>
+<span>（5）当前对象的成员函数中创建的对象</span></p></blockquote><p><span>任何一个对象如果满足上面的条件之一，就是当前对象的&quot;朋友&quot;，否则就是&quot;陌生人&quot;。在应用迪米特法则时，一个对象只能与直接朋友发生交互，不要与&quot;陌生人&quot;发生直接交互，这样做可以降低系统的耦合度，一个对象的改变不会给太多其他对象带来影响。</span></p><p><span>迪米特法则要求在设计系统时应该尽量减少对象之间的交互，如果两个对象之间不必彼此直接通信，那么这两个对象就不应当发生任何直接的相互作用，如果其中一个对象需要调用另一个对象的方法，可以通过&quot;第三者&quot;转发这个调用。简而言之，就是通过引入一个合理的&quot;第三者&quot;来降低现有对象之间的耦合度。</span></p><blockquote><p><span>在将迪米特法则运用到系统设计时要注意下面几点：</span></p><ul><li><p><span>在类的划分上应当尽量创建松耦合的类，类之间的耦合度越低，就越有利于复用，一个处在松耦合中的类一旦被修改不会对关联的类造成太大影响；</span></p></li><li><p><span>在类的结构设计上，每一个类都应当尽量降低其成员变量和成员函数的访问权限；</span></p></li><li><p><span>在类的设计上，只要有可能，一个类型应当设计成不变类；</span></p></li><li><p><span>在对其他类的引用上，一个对象对其他对象的引用应当降到最低。</span></p></li></ul><p><strong><span>迪米特原则又称为最少知道原则。核心思想：降低耦合程度。</span></strong></p></blockquote><p><strong><span>要点</span></strong></p><ul><li><p><span>只与直接的朋友通信</span></p></li><li><p><span>朋友间也是有距离的</span></p></li><li><p><span>自己的就是自己的</span></p></li><li><p><span>如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用</span></p></li></ul><p><strong><span>作用</span></strong></p><ul><li><p><span>降低类之间的耦合度</span></p></li><li><p><span>提高模块的相对独立性</span></p></li><li><p><span>提高类的可重用率</span></p></li><li><p><span>降低系统的复杂度</span></p></li></ul><h2 id='组合复用原则'><span>组合复用原则</span></h2><p><span>组合复用原则 (Composite Reuse Principle, CRP)：</span><strong><span>尽量使用组合/聚合的方式，而不是使用继承来达到复用的目的。</span></strong></p><p><span>组合复用原则就是在一个新的对象里通过关联关系（包括组合关系和聚合关系）来使用一些已有的对象，使之成为新对象的一部分，新对象通过委派调用已有对象的方法达到复用功能的目的。简而言之，在复用时要尽量使用组合/聚合关系（关联关系），少用继承。</span></p><blockquote><p><span>在面向对象设计中可以通过两种方法在不同的环境中复用已有的设计和实现：即通过组合/聚合关系或通过继承。</span></p><p><span>首先应该考虑使用组合/聚合，组合/聚合可以使系统更加灵活，降低类与类之间的耦合度，一个类的变化对其他类造成的影响相对较少；其次才考虑继承，在使用继承时需要严格遵循里氏替换原则，有效使用继承会有助于对问题的理解，降低复杂度，而滥用继承反而会增加系统构建和维护的难度以及系统的复杂度。</span></p><p><span>通过继承来进行复用的主要问题在于继承复用会破坏系统的封装性，因为继承会将基类的实现细节暴露给子类，由于基类的某些内部细节对子类来说是可见的，所以这种复用又称“白箱”复用，如果基类发生改变，那么子类的实现也不得不发生改变；从基类继承而来的实现是静态的，不可能在运行时发生改变，没有足够的灵活性；而且继承只能在有限的环境中使用（如类没有声明为不能被继承 —— final语法）。</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="c++"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="c++"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 8.92578px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>6</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">A</span> <span class="cm-keyword">final</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{};</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">B</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">: <span class="cm-keyword">public</span> <span class="cm-variable">A</span> <span class="cm-comment">//error</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{};</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 131px;"></div><div class="CodeMirror-gutters" style="height: 131px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre></blockquote><p><span>由于组合/聚合关系可以将已有的对象纳入到新对象中，使之成为新对象的一部分，因此新对象可以调用已有对象的功能，这样做可以使成员对象的内部实现细节对于新对象不可见，所以这种复用又称为&quot;黑箱&quot;复用。相对继承关系而言，其耦合度相对较低，成员对象的变化对新对象的影响不大，可以在新对象中根据实际需要有选择性地调用成员对象的操作。</span></p><p><span>组合复用可以在运行时动态进行，新对象可以动态地引用与成员对象类型相同的其他对象。</span></p><p><strong><span>核心思想：在复用时要尽量使用组合/聚合关系（关联关系），少用继承。</span></strong></p><p><strong><span>要点</span></strong></p><ul><li><p><span>优先使用组合而不是继承</span></p></li><li><p><span>通过组合来实现代码复用</span></p></li><li><p><span>避免继承层次过深</span></p></li><li><p><span>提高系统的灵活性</span></p></li></ul><p><strong><span>作用</span></strong></p><ul><li><p><span>维持类的封装性</span></p></li><li><p><span>降低依赖关系</span></p></li><li><p><span>减少继承层次</span></p></li><li><p><span>提高灵活性和可扩展性</span></p></li></ul></div></div>
+
+<script>(function(){function e(e,n,i){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var t=e.target;t&&t!=this;t=t.parentNode)if(t.matches(n)){!1===i.call(t,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)}var t=document.body.parentElement,i=[],r=null,o=document.body.classList.contains("typora-export-collapse-outline");function a(){return t.scrollTop}e("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),u(),!1}),e("click",".outline-item",function(e){var t=this.querySelector(".outline-label");location.hash="#"+t.getAttribute("href"),o&&((t=this.closest(".outline-item-wrapper").classList).contains("outline-item-open")||t.add("outline-item-open"),d(),t.add("outline-item-active"))});function s(){var e=a();r=null;for(var t=0;t<i.length&&i[t][1]-e<60;t++)r=i[t]}function n(){c=setTimeout(function(){var n;i=[],n=a(),document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(e=>{var t=e.getAttribute("id");i.push([t,n+e.getBoundingClientRect().y])}),s(),u()},300)}var l,c,d=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},u=function(){if(r&&(d(),t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(r[0]):r[0])+'"]')))if(o){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var t,n=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");n;)n=(t=n).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")};window.addEventListener("scroll",function(e){l&&clearTimeout(l),l=setTimeout(function(){s(),u()},300)});window.addEventListener("resize",function(e){c&&clearTimeout(c),n()}),n()})();</script></body>
+</html>
