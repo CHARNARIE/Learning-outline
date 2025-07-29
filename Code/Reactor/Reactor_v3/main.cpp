@@ -10,7 +10,6 @@ void message(const shared_ptr<TcpConnection> &func) {
     string str = func->receive();
     if (str.size() != 0) {
         cout << "收到：" << str << endl;
-        func->send("已收到");
     }
 }
 

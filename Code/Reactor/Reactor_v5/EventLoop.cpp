@@ -130,6 +130,9 @@ void EventLoop::wait() {
             int fd = _epollEvents[i].data.fd;
             if (fd == listenFd) {
                 handelNewConnection();
+            } else if (fd == _eventFd) {
+                handleRead();
+                doPendingTasks();
             } else {
                 handelMessage(fd);
             }

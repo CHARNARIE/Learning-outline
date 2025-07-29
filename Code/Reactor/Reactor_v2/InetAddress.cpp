@@ -17,7 +17,7 @@ string InetAddress::getIp() {
 }
 
 unsigned short InetAddress::getPort() {
-    return _addr.sin_port;
+    return ntohs(_addr.sin_port);
 }
 
 struct sockaddr_in *InetAddress::getInetAddressPtr() {

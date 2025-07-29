@@ -37,8 +37,12 @@ void HeadServer::message(const shared_ptr<TcpConnection> &conn) {
     string str = conn->receive();
     if (str.size() != 0) {
         cout << "收到：" << str << endl;
-        conn->send("已收到");
     }
+    // 这里收到信息，创建任务将其加入任务队列异步执行
+    // 执行完毕后会自动调用sendInLoop创建新的返回任务
+    // 异步回复给客户端
+    MyTask task{msg, conn};
+    _pool.addTask(std::bind(&MyTask::process, task));
 }
 
 void HeadServer::closeConnection(const shared_ptr<TcpConnection> &conn) {
